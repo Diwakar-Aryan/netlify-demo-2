@@ -1,0 +1,15 @@
+{
+  "name": "netlify",
+  "type": "module",
+  "scripts": {
+    "dev": "cd .. && npx netlify functions:serve"
+  },
+  "dependencies": {
+    "@netlify/functions": "^1.3.0",
+    "code-tag": "^1.1.0",
+    "node-fetch": "^3.2.10"
+  },
+  "devDependencies": {
+    "netlify-cli": "^15.1.1"
+  }
+}

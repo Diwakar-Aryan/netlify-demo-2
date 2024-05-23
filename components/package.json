@@ -1,0 +1,21 @@
+{
+  "name": "components",
+  "files": [
+    "dist/components.es.js"
+  ],
+  "scripts": {
+    "start": "vite --host",
+    "build": "tsc && vite build && rm -Rf dist/library",
+    "dev": "npm start"
+  },
+  "dependencies": {
+    "color-blend": "^3.0.1",
+    "lit": "^2.1.0",
+    "pinch-zoom-element": "^1.1.1",
+    "sleep-promise": "^9.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.4.4",
+    "vite": "^2.7.13"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "styles",
+  "files": [
+    "dist/style.css"
+  ],
+  "scripts": {
+    "start": "vite --host",
+    "build": "vite build && rm dist/styles.*.js",
+    "dev": "npm start"
+  },
+  "devDependencies": {
+    "postcss-scss": "^4.0.3",
+    "sass": "^1.62.1",
+    "vite": "^2.7.2"
+  }
+}

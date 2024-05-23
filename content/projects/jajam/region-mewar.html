@@ -1,0 +1,143 @@
+<main class="layout--container--grid layout--leading--none layout--lining--none" style="align-self: stretch;">
+    <style>
+        img {
+            width: 100%;
+        }
+
+        h1.--heavy {
+            font-weight: 800;
+            letter-spacing: 0.1ch;
+        }
+
+        p {
+            max-width: 60ch;
+        }
+
+        blockquote {
+            margin-bottom: unset;
+        }
+        .ui--subnav {
+            width: 100%;
+            justify-content: space-evenly;
+            --ui--base--font--weight: 600;
+        }
+
+        .ui--subnav>hr {
+            flex-grow: 1;
+        }
+
+        .ui--subnav>ui--button {
+            opacity: 66%;
+        }
+
+        .ui--subnav>ui--button.currentPage {
+            opacity: 100%;
+            --ui--base--font--weight: 800;
+        }
+
+        @media (width < 714px) {
+            .ui--subnav {
+                display: grid;
+                grid-template-columns: 1fr;
+                justify-items: center;
+            }
+        }
+    </style>
+
+    <nav id="header" class="layout--container--grid layout--bleeding layout--leading--none layout--lining--none"
+        style="background: var(--palette--lightest); color: var(--palette--primary);">
+        <div id="nav--subpages" class="ui--subnav layout--container--flex layout--leading--thin layout--spacing"
+            style="padding-block: 1em;
+            --ui--base--font--weight: 700;
+">
+            <ui--button tabindex="0" tier="quinary" link="" target="_self" href="/projects/jajam">
+                People's Textile
+            </ui--button>
+            <hr>
+            <ui--button tabindex="0" tier="quinary" link="" target="_self" href="/projects/jajam/features">
+                The Journey
+            </ui--button>
+            <hr>
+            <ui--button tabindex="0" tier="quinary" link="" target="_self" href="/projects/jajam/regions"
+                class="currentPage">
+                Regional Jajam
+            </ui--button>
+        </div>
+    </nav>
+
+    <section id="showcase"
+        class="layout--container--grid layout--bleeding layout--leading--thick layout--lining--thick">
+        <style>
+            .workshops--info {
+                display: grid;
+                align-items: start;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: var(--m1);
+            }
+
+            .workshops--detail {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-columns: repeat(auto-fit, minmax(16ch, 1fr));
+                gap: var(--m0);
+            }
+
+            .workshops--detail>* {
+                display: grid;
+                gap: 0.33em;
+            }
+
+            .workshops--detail a {
+                text-decoration: none;
+            }
+
+            .workshops--detail a:not(:last-of-type)::after {
+                content: ', ';
+            }
+
+            .workshops--detail .token--featured {
+                color: var(--palette--primary);
+            }
+
+            .workshops--detail .token--label--small {
+                color: var(--palette--secondary-accent);
+            }
+
+            @media (width < 714px) {
+                .workshops--info {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+
+        <div class="layout--container--grid --center layout--leading--thick">
+            <h2>Regional Jajam from Mewar</h2>
+        </div>
+
+        <!-- <img class="layout--span--bleed" src="/media/projects/jajam/regions/pattern.jajam_-1024x205.png"> -->
+    </section>
+
+    <color--palette id="secondary-content" primary="#656565" secondary="#dfdfdf" preset="base">
+        <section id="comingsoon" class="layout--container--grid --article layout--bleeding layout--lining layout--lining--thick"
+        style="width: 100vw; background: var(--palette--secondary); color: var(--palette--primary);">
+            <h3>Coming Soon</h3>
+            <p>Currently, the research in this part of Rajasthan is underway. We are exploring community living, listening to unheard stories and tracing new routes.</p>
+
+            <aside>
+                <aside>
+                    <ui--button tier="primary" featured stretch link href="/contact" class="layout--span--minute --end">
+                        Join Us
+                    </ui--button>
+                </aside>
+            </aside>
+        </section>
+        <style>
+            @media(width > 1160px) {
+                #comingsoon {
+                    min-height: 50vh;
+                    align-content: center;
+                }
+            }
+        </style>
+    </color--palette>
+</main>

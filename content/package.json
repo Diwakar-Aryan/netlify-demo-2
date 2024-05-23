@@ -1,0 +1,12 @@
+{
+  "name": "content",
+  "scripts": {
+    "start": "npx concurrently -k -s command-1 \"npm run proxy\" \"npm run cms\"",
+    "content": "npm start",
+    "cms": "npx serve .",
+    "proxy": "cd ../ && npx netlify-cms-proxy-server"
+  },
+  "devDependencies": {
+    "netlify-cms-proxy-server": "^1.3.24"
+  }
+}

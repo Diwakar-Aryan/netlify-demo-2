@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Fecund · Components</title>
+
+    <!-- NOTE: Preload necessary to avoid FOUC inside components -->
+    <link rel="preload" href="/library/styles.css" as="style" />
+    <link href="/library/styles.css" rel="stylesheet" />
+
+    <!-- Container query polyfill -->
+    <script src="https://cdn.jsdelivr.net/npm/container-query-polyfill@1/dist/container-query-polyfill.modern.js"></script>
+
+    <script type="module" src="/index.js"></script>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        display: grid;
+        gap: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <color--palette
+      primary="#5272a0"
+      secondary="#ececdf"
+      class="layout--container--grid layout--leading--thick"
+    >
+      <site--header
+        has-cart
+        sitemap='{"Projects":{"Jajam":"#","Natural Dye":"#"},"Platform":{"Workshop":"#","Shop":"#"}}'
+      ></site--header>
+
+      <section
+        class="layout--container--grid --article layout--bleeding layout--lining"
+      >
+        <color--grading no-normal no-multiply no-addition>
+          <img
+            src="https://images.unsplash.com/photo-1516417156595-3ca5df62a3a4?auto=format&fit=crop&w=1024&h=1024&q=80"
+          />
+        </color--grading>
+
+        <section id="palette" class="layout--span--minute --end">
+          <style>
+            #palette {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+            }
+            #palette > div {
+              padding: var(--m-1);
+              display: grid;
+              align-items: center;
+              font-weight: bold;
+            }
+            #palette > div:is(.highlight, .error) {
+              height: var(--m-2);
+            }
+          </style>
+          <div
+            style="
+              background: var(--palette--primary--paper);
+              color: var(--palette--primary--ink);
+            "
+          >
+            Primary
+          </div>
+          <div
+            style="
+              background: var(--palette--primary-accent--paper);
+              color: var(--palette--primary-accent--ink);
+            "
+          >
+            Primary-Accent
+          </div>
+          <div
+            style="
+              background: var(--palette--secondary--paper);
+              color: var(--palette--secondary--ink);
+            "
+          >
+            Secondary
+          </div>
+          <div
+            style="
+              background: var(--palette--secondary-accent--paper);
+              color: var(--palette--secondary-accent--ink);
+            "
+          >
+            Secondary-Accent
+          </div>
+          <div
+            style="
+              background: var(--palette--neutral-1--paper);
+              color: var(--palette--neutral--ink);
+            "
+          >
+            Neutral-1
+          </div>
+          <div
+            style="
+              background: var(--palette--neutral-2--paper);
+              color: var(--palette--neutral--ink);
+            "
+          >
+            Neutral-2
+          </div>
+          <div
+            style="
+              background: var(--palette--neutral-3--paper);
+              color: var(--palette--neutral--ink);
+            "
+          >
+            Neutral-3
+          </div>
+          <div
+            style="
+              background: var(--palette--neutral-4--paper);
+              color: var(--palette--neutral--ink);
+            "
+          >
+            Neutral-4
+          </div>
+          <div
+            style="
+              background: var(--palette--neutral-5--paper);
+              color: var(--palette--neutral--ink);
+              grid-column: span 2;
+            "
+          >
+            Neutral-5
+          </div>
+          <div
+            class="highlight"
+            style="background: var(--palette--highlight); opacity: 50%"
+          ></div>
+          <div
+            class="error"
+            style="background: var(--palette--error); opacity: 75%"
+          ></div>
+        </section>
+
+        <section class="layout--container--flex">
+          <logo--element notype></logo--element>
+          <logo--element></logo--element>
+          <logo--element nomark></logo--element>
+        </section>
+
+        <ui--separator>Separator</ui--separator>
+        <ui--separator alignment="center">Separator</ui--separator>
+        <ui--separator alignment="end">Separator</ui--separator>
+        <ui--separator custom>
+          <span class="token--label--small">Default Slot</span>
+          <span slot="sub" class="token--label--small">Sub Slot</span>
+        </ui--separator>
+        <ui--separator custom heavy>
+          <h3>Default Slot</h3>
+          <h5 slot="sub">Sub Slot</h5>
+        </ui--separator>
+
+        <ui--blockquote custom>
+          <p>
+            Thus, <em>in precise usage</em>, the words
+            <strong>breathing</strong> and <strong>ventilation</strong> are
+            <a href="#">hyponyms</a>, <mark>not synonyms</mark>, of respiration;
+            but this prescription is not consistently followed, even by most
+            health care providers, because the term respiratory rate (RR) is a
+            well-established term in health care, even though it would need to
+            be consistently replaced with ventilation rate if the precise usage
+            were to be followed.
+          </p>
+          <p class="utility--hide">Lorem ipsum dolor sit amet.</p>
+          <p>Lorem ipsum dolor sit amet.</p>
+          <h1 slot="attribution" class="token--label--big">asdasd</h1>
+        </ui--blockquote>
+
+        <ui--details open>
+          <h3 slot="summary">This is a summary</h3>
+          <p>
+            Thus, <em>in precise usage</em>, the words
+            <strong>breathing</strong> and <strong>ventilation</strong> are
+            <a href="#">hyponyms</a>, <mark>not synonyms</mark>, of respiration;
+            but this prescription is not consistently followed, even by most
+            health care providers, because the term respiratory rate (RR) is a
+            well-established term in health care, even though it would need to
+            be consistently replaced with ventilation rate if the precise usage
+            were to be followed.
+          </p>
+        </ui--details>
+
+        <ui--accordion>
+          <ui--details open>
+            <span slot="summary" class="token--label--small">Apple!</span>
+            Apples.
+          </ui--details>
+          <ui--details>
+            <span slot="summary" class="token--label--small">Banana!</span>
+            Bananas.
+          </ui--details>
+          <ui--details>
+            <span slot="summary" class="token--label--small">Cherry!</span>
+            Cherries.
+          </ui--details>
+        </ui--accordion>
+
+        <ui--separator custom heavy>
+          <ui--switch tier="quaternary" value="banana">
+            <h3 data-switch-value="apple">Apple</h3>
+            <h3 data-switch-value="banana">Banana</h3>
+            <h3 data-switch-value="cherry">Cherry</h3>
+            <h3 data-switch-value="durian" class="utility--hide">Durian</h3>
+          </ui--switch>
+          <h5 slot="sub">Switch</h5>
+        </ui--separator>
+
+        <ui--switch tier="primary" value="banana">
+          <ui--button data-switch-value="apple">Apple</ui--button>
+          <ui--button data-switch-value="banana">Banana</ui--button>
+          <ui--button data-switch-value="cherry">Cherry</ui--button>
+          <ui--button data-switch-value="durian" class="utility--hide"
+            >Durian</ui--button
+          >
+        </ui--switch>
+
+        <ui--select tier="primary" value="select">
+          <ui--button data-select-value="select" light>Select</ui--button>
+          <ui--button data-select-value="apple">Apple</ui--button>
+          <ui--button data-select-value="banana">Banana Nanana</ui--button>
+          <ui--button data-select-value="cherry">Cherry</ui--button>
+          <ui--button data-select-value="durian" class="utility--hide"
+            >Durian</ui--button
+          >
+        </ui--select>
+
+        <ui--notification-dot>
+          <div class="token--value">Notification Dot</div>
+        </ui--notification-dot>
+
+        <section id="buttons" class="layout--container--flex">
+          <ui--button tabindex="0">Test</ui--button>
+          <ui--button tabindex="0" icon-start="spa" no-label></ui--button>
+          <ui--button
+            tabindex="0"
+            tier="primary"
+            featured
+            icon-start="spa"
+            no-label
+          ></ui--button>
+          <ui--button tabindex="0" featured icon-start="spa">Test</ui--button>
+          <ui--button tabindex="0" tier="tertiary" icon-start="spa"
+            >Test</ui--button
+          >
+          <ui--button tabindex="0" icon-start="link" link>Test</ui--button>
+        </section>
+
+        <ui--optionset class="layout--container--grid" type="one">
+          <ui--option tier="secondary" label="Choose">
+            <p id="placeholder">
+              Thus, <em>in precise usage</em>, the words
+              <strong>breathing</strong> and <strong>ventilation</strong> are
+              <a href="#">hyponyms</a>, <mark>not synonyms</mark>, of
+              respiration; but this prescription is not consistently followed.
+            </p>
+          </ui--option>
+          <ui--option layout="stack" justify="center" align="center">
+            <p id="placeholder">
+              Thus, <em>in precise usage</em>, the words
+              <strong>breathing</strong> and <strong>ventilation</strong> are
+              <a href="#">hyponyms</a>, <mark>not synonyms</mark>, of
+              respiration; but this prescription is not consistently followed,
+              even by most health care providers, because the term respiratory
+              rate (RR) is a well-established term in health care.
+            </p>
+          </ui--option>
+          <ui--option featured layout="inline" justify="end" align="end">
+            <p id="placeholder">
+              Thus, <em>in precise usage</em>, the words
+              <strong>breathing</strong> and <strong>ventilation</strong> are
+              <a href="#">hyponyms</a>, <mark>not synonyms</mark>, of
+              respiration; but this prescription is not consistently followed,
+              even by most health care providers, because the term respiratory
+              rate (RR) is a well-established term in health care, even though
+              it would need to be consistently replaced with ventilation rate if
+              the precise usage were to be followed.
+            </p>
+          </ui--option>
+        </ui--optionset>
+
+        <ui--textinput
+          tabindex="0"
+          icon-start="spa"
+          stretch
+          suffix="suffix"
+          class="layout--span--minor"
+          >Measure</ui--textinput
+        >
+        <ui--textinput
+          tabindex="0"
+          icon-start="spa"
+          stretch
+          area
+          class="layout--span--minor"
+          >Ahem</ui--textinput
+        >
+
+        <ui--separator class="layout--span--copy"></ui--separator>
+
+        <embed--gallery
+          label="See all"
+          href="#"
+          class="layout--span--copy utility--no-fouc"
+        >
+          <img
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+            src="https://picsum.photos/seed/a/2000/3000"
+          />
+          <img
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+            src="https://picsum.photos/seed/b/3000/2000"
+          />
+          <img
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+            src="https://picsum.photos/seed/c/1000/3000"
+            class="--tall"
+          />
+          <img
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+            src="https://picsum.photos/seed/d/2000/3000"
+            class="--tall"
+          />
+          <img
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+            src="https://picsum.photos/seed/e/2000/2000"
+          />
+          <img
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+            src="https://picsum.photos/seed/f/3000/3000"
+          />
+          <img
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+            src="https://picsum.photos/seed/g/3000/2000"
+          />
+        </embed--gallery>
+      </section>
+
+      <section
+        class="layout--container--grid --article layout--bleeding layout--lining"
+      >
+        <section
+          class="programs layout--span--copy layout--container--flexgrid"
+          style="----min-width: min(33vw, 12.5rem)"
+        >
+          <site--program></site--program>
+          <site--program></site--program>
+          <site--program></site--program>
+          <site--program></site--program>
+          <site--program></site--program>
+          <site--program></site--program>
+          <site--program></site--program>
+          <site--program></site--program>
+          <site--program></site--program>
+          <site--program></site--program>
+          <site--program></site--program>
+        </section>
+
+        <section
+          class="excursions layout--span--copy layout--container--flexgrid"
+          style="----min-width: 20rem"
+        >
+          <site--excursion></site--excursion>
+          <site--excursion></site--excursion>
+          <site--excursion></site--excursion>
+          <site--excursion></site--excursion>
+          <site--excursion></site--excursion>
+          <site--excursion></site--excursion>
+          <site--excursion></site--excursion>
+        </section>
+
+        <site--program></site--program>
+        <site--excursion></site--excursion>
+        <site--excursion mode="excerpt" class="layout--span--copy">
+          Body Wide: Physiological respiration involves the mechanisms that
+          ensure that the composition of the functional residual capacity is
+          kept constant, and equilibrates with the gases dissolved in the
+          pulmonary capillary blood, and thus throughout the body.
+        </site--excursion>
+      </section>
+
+      <section
+        class="layout--container--grid --article layout--bleeding layout--lining"
+      >
+        <section
+          class="programs layout--span--copy layout--container--grid"
+          style="----min-width: min(33vw, 12.5rem)"
+        >
+          <site--note locked>
+            <article class="layout--container--grid --article">
+              <p class="--split">
+                Body Wide: Physiological respiration involves the mechanisms
+                that ensure that the composition of the functional residual
+                capacity is kept constant, and equilibrates with the gases
+                dissolved in the pulmonary capillary blood, and thus throughout
+                the body.
+              </p>
+              <p>
+                Physiological respiration involves the mechanisms that ensure
+                that the composition of the functional residual capacity is kept
+                constant
+              </p>
+            </article>
+          </site--note>
+          <site--note locked selected>
+            <article class="layout--container--grid --article">
+              <p class="--split">
+                Body Wide: Physiological respiration involves the mechanisms
+                that ensure that the composition of the functional residual
+                capacity is kept constant, and equilibrates with the gases
+                dissolved in the pulmonary capillary blood, and thus throughout
+                the body.
+              </p>
+              <p>
+                Physiological respiration involves the mechanisms that ensure
+                that the composition of the functional residual capacity is kept
+                constant
+              </p>
+            </article>
+          </site--note>
+          <site--note selected>
+            <article class="layout--container--grid --article">
+              <p class="--split">
+                Body Wide: Physiological respiration involves the mechanisms
+                that ensure that the composition of the functional residual
+                capacity is kept constant, and equilibrates with the gases
+                dissolved in the pulmonary capillary blood, and thus throughout
+                the body.
+              </p>
+              <p>
+                Physiological respiration involves the mechanisms that ensure
+                that the composition of the functional residual capacity is kept
+                constant
+              </p>
+            </article>
+          </site--note>
+          <site--note>
+            <article class="layout--container--grid --article">
+              <p class="--split">
+                Body Wide: Physiological respiration involves the mechanisms
+                that ensure that the composition of the functional residual
+                capacity is kept constant, and equilibrates with the gases
+                dissolved in the pulmonary capillary blood, and thus throughout
+                the body.
+              </p>
+              <p>
+                Physiological respiration involves the mechanisms that ensure
+                that the composition of the functional residual capacity is kept
+                constant
+              </p>
+            </article>
+          </site--note>
+        </section>
+      </section>
+
+      <section
+        class="layout--container--grid --article layout--bleeding layout--lining"
+      >
+        <embed--doc src="/sample.pdf"></embed--doc>
+      </section>
+
+      <section class="layout--container--grid --article layout--bleeding layout--lining">
+        <embed--filler-image src="https://placedog.net/600/800" style="height: 30vw;"></embed--filler-image>
+      </section>
+
+      <site--footer
+        sitemap='{
+        "Projects": {
+          "Jajam": "#",
+          "Natural Dye": "#"
+        },
+        "Platform": {
+          "Workshop":"#",
+          "Shop": "#"
+        },
+        "Test": {
+          "Apple":"#",
+          "Banana": "#",
+          "Cherry": "#"
+        }
+      }'
+        links='[
+        {
+          "Twitter": "#",
+          "Instagram": "#",
+          "Contact Us": "#"
+        },
+        {
+          "Terms": "#",
+          "Privacy Policy": "#",
+          "Return Policy": "#"
+        }
+      ]'
+      >
+        In the eighteenth century the German philosopher Immanuel Kant developed
+        a theory of knowledge in which knowledge about space can be both a
+        priori and synthetic.
+      </site--footer>
+    </color--palette>
+  </body>
+</html>

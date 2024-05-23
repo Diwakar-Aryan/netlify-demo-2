@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "workspaces": [
+    "styles",
+    "components",
+    "content",
+    "site",
+    "netlify"
+  ],
+  "scripts": {
+    "content": "turbo run content",
+    "build": "turbo run build --no-cache",
+    "dev": "turbo run dev"
+  },
+  "devDependencies": {
+    "turbo": "latest"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  }
+}

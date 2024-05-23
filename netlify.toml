@@ -1,0 +1,55 @@
+# https://docs.netlify.com/configure-builds/file-based-configuration
+# Be aware that if you have conflicting configuration values, settings specified in netlify.toml override any corresponding settings in the Netlify UI.
+
+
+
+# https://docs.netlify.com/routing/redirects/
+# https://docs.netlify.com/configure-builds/file-based-configuration/#redirects
+
+[[redirects]]
+  from = "/about"
+  to = "/#copy" # We don't have an about page by design, this content should be the homepage
+
+# [[redirects]]
+#   from = "/contact"
+#   to = "/contact" # Hasn't changed
+
+[[redirects]]
+  from = "/terms-of-service"
+  to = "/terms"
+
+[[redirects]]
+  from = "/privacy-policy"
+  to = "/privacy"
+
+[[redirects]]
+  from = "/delivery-and-returns"
+  to = "/returns"
+
+[[redirects]]
+  from = "/jajam-textile"
+  to = "/projects/jajam"
+
+[[redirects]]
+  from = "/jajam-exhibition"
+  to = "/projects/jajam/#exhibition"
+
+[[redirects]]
+  from = "/rediscovering-jajam-documentary"
+  to = "/projects/jajam/#documentary"
+
+[[redirects]]
+  from = "/jajam-journey"
+  to = "/projects/jajam/features"
+
+[[redirects]]
+  from = "/regional-jajam-rajasthan"
+  to = "/projects/jajam/regions"
+
+[[redirects]]
+  from = "/natural-dye-workshop"
+  to = "/workshops" # The new site does not just default to natural-dye
+
+[[redirects]]
+  from = "/collection"
+  to = "/collections"

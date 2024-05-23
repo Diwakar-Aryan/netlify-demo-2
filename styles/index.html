@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fecund · Style</title>
+    <script src="https://cdn.jsdelivr.net/npm/container-query-polyfill@1/dist/container-query-polyfill.modern.js"></script>
+  </head>
+
+  <body>
+    <style>
+      :where(*) {
+        background: #0000000a;
+      }
+
+      details[class] > summary {
+        margin: 1rem 0;
+        cursor: pointer;
+        list-style: none;
+      }
+      details[class] > summary > * {
+        display: inline;
+      }
+
+      section {
+        display: grid;
+        gap: 1rem;
+        padding: 0;
+        /* border-left: 0.25rem solid #00000020; */
+      }
+    </style>
+
+    <section id="scale">
+      <details class="index">
+        <summary><h2>Scale</h2></summary>
+        <style>
+          #scale div {
+            width: 1em;
+            height: 1em;
+            overflow: hidden;
+            background: black;
+            color: white;
+          }
+          #scale div > span {
+            font-size: 0.5em;
+          }
+        </style>
+        <section
+          class="layout--container--grid layout--bleeding layout--lining"
+        >
+          <section id="scale__small-units">
+            <h3>Small Units</h3>
+
+            <div style="font-size: var(--b-2)"><span>b-2</span></div>
+            <div style="font-size: var(--b-1)"><span>b-1</span></div>
+            <div style="font-size: var(--b-h)"><span>b-½</span></div>
+          </section>
+
+          <section id="scale__base">
+            <h3>Base</h3>
+
+            <div style="font-size: var(--b0)"><span>b0</span></div>
+            <div style="font-size: var(--bh)"><span>b½</span></div>
+            <div style="font-size: var(--b1)"><span>b1</span></div>
+            <div style="font-size: var(--b1h)"><span>b1½</span></div>
+            <div style="font-size: var(--b2)"><span>b2</span></div>
+            <div style="font-size: var(--b3)"><span>b3</span></div>
+            <div style="font-size: var(--b4)"><span>b4</span></div>
+            <div style="font-size: var(--b5)"><span>b5</span></div>
+            <div style="font-size: var(--b6)"><span>b6</span></div>
+            <div style="font-size: var(--b7)"><span>b7</span></div>
+            <div style="font-size: var(--b8)"><span>b8</span></div>
+          </section>
+
+          <section id="scale__piano">
+            <h3>Piano</h3>
+
+            <div style="font-size: var(--p0)"><span>p0</span></div>
+            <div style="font-size: var(--ph)"><span>p½</span></div>
+            <div style="font-size: var(--p1)"><span>p1</span></div>
+            <div style="font-size: var(--p1h)"><span>p1½</span></div>
+            <div style="font-size: var(--p2)"><span>p2</span></div>
+            <div style="font-size: var(--p3)"><span>p3</span></div>
+            <div style="font-size: var(--p4)"><span>p4</span></div>
+            <div style="font-size: var(--p5)"><span>p5</span></div>
+            <div style="font-size: var(--p6)"><span>p6</span></div>
+            <div style="font-size: var(--p7)"><span>p7</span></div>
+            <div style="font-size: var(--p8)"><span>p8</span></div>
+          </section>
+
+          <section id="scale__forte">
+            <h3>Forté</h3>
+
+            <div style="font-size: var(--f0)"><span>f0</span></div>
+            <div style="font-size: var(--fh)"><span>f½</span></div>
+            <div style="font-size: var(--f1)"><span>f1</span></div>
+            <div style="font-size: var(--f1h)"><span>f1½</span></div>
+            <div style="font-size: var(--f2)"><span>f2</span></div>
+            <div style="font-size: var(--f3)"><span>f3</span></div>
+            <div style="font-size: var(--f4)"><span>f4</span></div>
+            <div style="font-size: var(--f5)"><span>f5</span></div>
+            <div style="font-size: var(--f6)"><span>f6</span></div>
+            <div style="font-size: var(--f7)"><span>f7</span></div>
+            <div style="font-size: var(--f8)"><span>f8</span></div>
+          </section>
+
+          <section id="scale__modulo">
+            <h3>Modulo</h3>
+
+            <div style="font-size: var(--m0)"><span>m0</span></div>
+            <div style="font-size: var(--mh)"><span>m½</span></div>
+            <div style="font-size: var(--m1)"><span>m1</span></div>
+            <div style="font-size: var(--m1h)"><span>m1½</span></div>
+            <div style="font-size: var(--m2)"><span>m2</span></div>
+            <div style="font-size: var(--m3)"><span>m3</span></div>
+            <div style="font-size: var(--m4)"><span>m4</span></div>
+            <div style="font-size: var(--m5)"><span>m5</span></div>
+            <div style="font-size: var(--m6)"><span>m6</span></div>
+            <div style="font-size: var(--m7)"><span>m7</span></div>
+            <div style="font-size: var(--m8)"><span>m8</span></div>
+          </section>
+        </section>
+      </details>
+    </section>
+
+    <section id="layout">
+      <details class="index">
+        <summary><h2>Layout</h2></summary>
+        <style>
+          #layout *:where(.layout--container--grid, .layout--container--columngrid) > * {
+            min-height: 2rem;
+            background: #0005;
+          }
+        </style>
+
+        <section class="layout--container--grid layout--bleeding">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div class="layout--span--one"></div>
+          <div class="layout--span--one"></div>
+          <div class="layout--span--one"></div>
+          <div class="layout--span--one"></div>
+          <div class="layout--span--one"></div>
+          <div class="layout--span--one"></div>
+          <div class="layout--span--one"></div>
+          <div class="layout--span--one"></div>
+          <div class="layout--span--one"></div>
+          <div class="layout--span--one"></div>
+          <div class="layout--span--one"></div>
+          <div class="layout--span--one"></div>
+          <div class="layout--span--one"></div>
+          <div class="layout--span--one"></div>
+          <div class="layout--span--one"></div>
+          <div class="layout--span--one"></div>
+          <div class="layout--span--one"></div>
+          <div
+            class="layout--container--grid"
+          >
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div class="layout--span--one"></div>
+            <div class="layout--span--one"></div>
+            <div class="layout--span--one"></div>
+            <div class="layout--span--one"></div>
+            <div class="layout--span--one"></div>
+            <div class="layout--span--one"></div>
+            <div class="layout--span--one"></div>
+            <div class="layout--span--one"></div>
+            <div class="layout--span--one"></div>
+            <div class="layout--span--one"></div>
+            <div class="layout--span--one"></div>
+            <div class="layout--span--one"></div>
+          </div>
+          <div
+            class="layout--container--grid --article layout--bleeding layout--bleeding layout--span--bleed"
+          >
+            <div></div>
+            <div></div>
+            <div class="layout--span--major"></div>
+            <div class="layout--span--major --end"></div>
+            <div class="layout--span--medium"></div>
+            <div class="layout--span--medium --end layout--container--grid">
+              <div></div>
+              <div></div>
+              <div class="layout--span--one"></div>
+              <div class="layout--span--one"></div>
+              <div class="layout--span--one"></div>
+              <div class="layout--span--one"></div>
+              <div class="layout--span--one"></div>
+              <div class="layout--span--one"></div>
+            </div>
+            <div class="layout--span--minor"></div>
+            <div class="layout--span--minor --end"></div>
+            <div class="layout--span--minute"></div>
+            <div class="layout--span--minute --end"></div>
+          </div>
+          <div
+            class="layout--container--grid --center"
+          >
+            <div style="width: 100px; height: 100px;"></div>
+            <div style="width: 100px; height: 100px;"></div>
+            <div style="width: 100px; height: 100px;"></div>
+          </div>
+          <div
+            class="layout--container--columngrid"
+          >
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div
+            class="layout--container--grid --columns layout--bleeding layout--span--bleed"
+          >
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </section>
+      </details>
+    </section>
+
+    <section id="typography">
+      <details class="index">
+        <summary><h2>Typography</h2></summary>
+
+        <section
+          class="layout--container--grid --article layout--bleeding layout--lining"
+        >
+          <h1>H1: Physio&shylogical respi&shyration mecha&shynisms</h1>
+          <h2>H2: Physio&shylogical respi&shyration mecha&shynisms</h2>
+          <h3>H3: Physio&shylogical respi&shyration mecha&shynisms</h3>
+          <h4>H4: Physio&shylogical respi&shyration mecha&shynisms</h4>
+          <h5>HX: Physio&shylogical respi&shyration mecha&shynisms</h5>
+
+          <blockquote>
+            <p>
+              Feature: Physiological respiration involves the mechanisms that
+              ensure that the composition of the functional residual capacity is
+              kept constant
+            </p>
+          </blockquote>
+
+          <p>
+            Thus, <em>in precise usage</em>, the words
+            <strong>breathing</strong> and <strong>ventilation</strong> are
+            <a href="#">hyponyms</a>, <mark>not synonyms</mark>, of respiration;
+            but this prescription is not consistently followed, even by most
+            health care providers, because the term respiratory rate (RR) is a
+            well-established term in health care, even though it would need to
+            be consistently replaced with ventilation rate if the precise usage
+            were to be followed.
+          </p>
+
+          <p class="layout--span--minor">
+            Thus, <em>in precise usage</em>, the words
+            <strong>breathing</strong> and <strong>ventilation</strong> are
+            <a href="#">hyponyms</a>, <mark>not synonyms</mark>, of respiration;
+            but this prescription is not consistently followed, even by most
+            health care providers, because the term respiratory rate (RR) is a
+            well-established term in health care, even though it would need to
+            be consistently replaced with ventilation rate if the precise usage
+            were to be followed.
+          </p>
+
+          <p class="--split">
+            Thus, <em>in precise usage</em>, the words
+            <strong>breathing</strong> and <strong>ventilation</strong> are
+            <a href="#">hyponyms</a>, <mark>not synonyms</mark>, of respiration;
+            but this prescription is not consistently followed, even by most
+            health care providers, because the term respiratory rate (RR) is a
+            well-established term in health care, even though it would need to
+            be consistently replaced with ventilation rate if the precise usage
+            were to be followed.
+          </p>
+
+          <aside>
+            <figure>
+              <video controls>
+                <source
+                  src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
+                  type="video/webm"
+                />
+                <source
+                  src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+                  type="video/mp4"
+                />
+                Your browser doesn't support embedded videos.
+              </video>
+              <figcaption>Timelapse of a blooming flower</figcaption>
+            </figure>
+
+            <p>
+              <small
+                >Thus, <em>in precise usage</em>, the words
+                <strong>breathing</strong> and <strong>ventilation</strong> are
+                <a href="#">hyponyms</a>, <mark>not synonyms</mark>, of
+                respiration; but this prescription is not consistently followed,
+                even by most health care providers, because the term respiratory
+                rate (RR) is a well-established term in health care, even though
+                it would need to be consistently replaced with ventilation rate
+                if the precise usage were to be followed.</small
+              >
+            </p>
+          </aside>
+
+          <p>
+            <small
+              >Thus, <em>in precise usage</em>, the words
+              <strong>breathing</strong> and <strong>ventilation</strong> are
+              <a href="#">hyponyms</a>, <mark>not synonyms</mark>, of
+              respiration; but this prescription is not consistently followed,
+              even by most health care providers, because the term respiratory
+              rate (RR) is a well-established term in health care, even though
+              it would need to be consistently replaced with ventilation rate if
+              the precise usage were to be followed.</small
+            >
+          </p>
+
+          <p class="layout--span--minor">
+            <small
+              >Thus, <em>in precise usage</em>, the words
+              <strong>breathing</strong> and <strong>ventilation</strong> are
+              <a href="#">hyponyms</a>, <mark>not synonyms</mark>, of
+              respiration; but this prescription is not consistently followed,
+              even by most health care providers, because the term respiratory
+              rate (RR) is a well-established term in health care, even though
+              it would need to be consistently replaced with ventilation rate if
+              the precise usage were to be followed.</small
+            >
+          </p>
+
+          <hr />
+        </section>
+      </details>
+    </section>
+
+    <section id="interface">
+      <details class="index">
+        <summary><h2>Interface</h2></summary>
+        <section
+          class="layout--container--grid layout--bleeding layout--lining"
+        >
+          <section class="layout--container--flex">
+            <span class="token--label--big">Big Label</span>
+            <span class="token--label--small">Small Label</span>
+            <span class="token--label--default">Label</span>
+            <span class="token--value">Value</span>
+            <span class="token--caption">Caption</span>
+            <span class="token--featured">Featured</span>
+            <div class="ui--notification-dot">
+              <div class="token--value">Notification Dot</div>
+              <div class="dot"></div>
+            </div>
+          </section>
+
+          <section class="layout--container--flex">
+            <span class="token--icon">face</span>
+            <span class="token--icon">
+              <svg
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                stroke="#972E34"
+              >
+                <path
+                  d="M5.66675 3.99984L8.00008 1.6665L10.3334 3.99984L8.00008 6.33317L5.66675 3.99984Z"
+                />
+                <path
+                  d="M5.66675 11.9998L8.00008 9.6665L10.3334 11.9998L8.00008 14.3332L5.66675 11.9998Z"
+                />
+                <path
+                  d="M9.66675 7.99984L12.0001 5.6665L14.3334 7.99984L12.0001 10.3332L9.66675 7.99984Z"
+                />
+                <path
+                  d="M1.66675 7.99984L4.00008 5.6665L6.33341 7.99984L4.00008 10.3332L1.66675 7.99984Z"
+                />
+                <path
+                  d="M9.66675 7.99984L12.0001 5.6665L14.3334 7.99984L12.0001 10.3332L9.66675 7.99984Z"
+                />
+                <path
+                  d="M1.66675 7.99984L4.00008 5.6665L6.33341 7.99984L4.00008 10.3332L1.66675 7.99984Z"
+                />
+              </svg>
+            </span>
+          </section>
+
+          <section class="layout--container--flex">
+            <svg
+              style="height: 1em"
+              viewBox="0 0 109 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8.60449 0.023763H7.88181C7.70113 0.023763 7.52046 0.192185 7.52046 0.408726V11.9817C7.52046 12.126 7.49787 12.2463 7.47529 12.3666L6.36868 14.4358L5.28465 12.3666C5.23948 12.2463 5.2169 12.126 5.2169 11.9817V0.408726C5.2169 0.192185 5.05881 0.023763 4.85555 0.023763H4.13287C3.92961 0.023763 3.77152 0.192185 3.77152 0.408726V11.9817C3.77152 12.126 3.74893 12.2463 3.70377 12.3666L2.59716 14.4358L1.51313 12.3666C1.46796 12.2463 1.44538 12.126 1.44538 11.9817V0.408726C1.44538 0.192185 1.28729 0.023763 1.08403 0.023763H0.361346C0.158091 0.023763 0 0.192185 0 0.408726V11.9817C0 12.535 0.158088 13.0644 0.451679 13.5215L1.67122 15.8072C1.71639 15.9275 1.85188 15.9997 1.98739 15.9997H3.22951C3.36502 15.9997 3.47793 15.9275 3.54569 15.8072L4.49421 14.0508L5.42015 15.8072C5.4879 15.9275 5.60082 15.9997 5.73633 15.9997H7.00103C7.13654 15.9997 7.24946 15.9275 7.31721 15.8072L8.53674 13.5215C8.80775 13.0644 8.96584 12.535 8.96584 11.9817V0.408726C8.96584 0.192185 8.80775 0.023763 8.60449 0.023763Z"
+              />
+              <path
+                d="M13.9906 0C12.5452 0 11.3708 1.25113 11.3708 2.79098V15.615C11.3708 15.8316 11.5515 16 11.7322 16H12.4549C12.6581 16 12.8162 15.8316 12.8162 15.615V8.75789H15.1424V15.615C15.1424 15.8316 15.3005 16 15.5037 16H16.2264C16.4297 16 16.5877 15.8316 16.5877 15.615V2.79098C16.5877 1.25113 15.4134 0 13.9906 0ZM15.1424 7.21805H12.8162V2.79098C12.8162 2.09323 13.3357 1.53985 13.9906 1.53985C14.6229 1.53985 15.1424 2.09323 15.1424 2.79098V7.21805Z"
+              />
+              <path
+                d="M22.7637 10.009V13.2331C22.7637 13.9068 22.2443 14.4602 21.6119 14.4602H20.4376V8.78196H21.6119C22.2443 8.78196 22.7637 9.33534 22.7637 10.009ZM24.2091 2.79098C24.2091 1.25113 23.0347 0 21.6119 0H19.7149C19.3309 0 18.9922 0.360902 18.9922 0.769924V15.2301C18.9922 15.6632 19.3309 16 19.7149 16H21.6119C23.0347 16 24.2091 14.7489 24.2091 13.2331V10.009C24.2091 9.21504 23.8929 8.51729 23.3961 8.01203C23.8929 7.50677 24.2091 6.78496 24.2091 5.99098V2.79098ZM22.7637 5.99098C22.7637 6.68872 22.2443 7.24211 21.6119 7.24211H20.4376V1.53985H21.6119C22.2443 1.53985 22.7637 2.09323 22.7637 2.79098V5.99098Z"
+              />
+              <path
+                d="M28.0589 0.384961C28.0589 0.19248 27.9008 0 27.6976 0H26.9749C26.7716 0 26.6135 0.19248 26.6135 0.384961C26.6135 0.384961 26.6135 0.384962 26.6135 0.409023V15.615C26.6135 15.8316 26.7716 16 26.9749 16H27.6976C27.9008 16 28.0589 15.8316 28.0589 15.615V0.384961Z"
+              />
+              <path
+                d="M34.3259 3.96992H35.0486C35.2518 3.96992 35.4099 3.8015 35.4099 3.58496V2.76692C35.4099 1.25113 34.2356 0 32.8128 0C31.39 0 30.2156 1.25113 30.2156 2.76692V3.99398C30.2156 4.71579 30.2156 4.71579 30.6447 5.53383L33.8968 11.6451C33.9645 11.7654 33.9646 11.7654 33.9646 12.0301V13.2331C33.9646 13.9308 33.4451 14.4842 32.8128 14.4842C32.1804 14.4842 31.661 13.9308 31.661 13.2331V12.415C31.661 12.2226 31.5029 12.0301 31.2996 12.0301H30.577C30.3737 12.0301 30.2156 12.2226 30.2156 12.415V13.2331C30.2156 14.7729 31.39 16 32.8128 16C34.2356 16 35.4099 14.7729 35.4099 13.2331V12.0301C35.4099 11.3323 35.4099 11.3323 34.9808 10.5143L31.7287 4.40301C31.661 4.28271 31.661 4.28271 31.661 3.99398V2.76692C31.661 2.09323 32.1804 1.53985 32.8128 1.53985C33.4451 1.53985 33.9646 2.09323 33.9646 2.76692V3.58496C33.9646 3.8015 34.1226 3.96992 34.3259 3.96992Z"
+              />
+              <path
+                d="M40.1974 0C38.752 0 37.5776 1.25113 37.5776 2.79098V15.615C37.5776 15.8316 37.7583 16 37.939 16H38.6617C38.8649 16 39.023 15.8316 39.023 15.615V8.75789H41.3492V15.615C41.3492 15.8316 41.5072 16 41.7105 16H42.4332C42.6364 16 42.7945 15.8316 42.7945 15.615V2.79098C42.7945 1.25113 41.6202 0 40.1974 0ZM41.3492 7.21805H39.023V2.79098C39.023 2.09323 39.5424 1.53985 40.1974 1.53985C40.8297 1.53985 41.3492 2.09323 41.3492 2.79098V7.21805Z"
+              />
+              <path
+                d="M48.9707 10.009V13.2331C48.9707 13.9068 48.4513 14.4602 47.819 14.4602H46.6446V8.78196H47.819C48.4513 8.78196 48.9707 9.33534 48.9707 10.009ZM50.4161 2.79098C50.4161 1.25113 49.2417 0 47.819 0H45.9219C45.538 0 45.1992 0.360902 45.1992 0.769924V15.2301C45.1992 15.6632 45.538 16 45.9219 16H47.819C49.2417 16 50.4161 14.7489 50.4161 13.2331V10.009C50.4161 9.21504 50.0999 8.51729 49.6031 8.01203C50.0999 7.50677 50.4161 6.78496 50.4161 5.99098V2.79098ZM48.9707 5.99098C48.9707 6.68872 48.4513 7.24211 47.819 7.24211H46.6446V1.53985H47.819C48.4513 1.53985 48.9707 2.09323 48.9707 2.79098V5.99098Z"
+              />
+              <path
+                d="M54.2659 0.384961C54.2659 0.19248 54.1078 0 53.9046 0H53.1819C52.9786 0 52.8206 0.19248 52.8206 0.384961C52.8206 0.384961 52.8206 0.384962 52.8206 0.409023V15.615C52.8206 15.8316 52.9786 16 53.1819 16H53.9046C54.1078 16 54.2659 15.8316 54.2659 15.615V0.384961Z"
+              />
+              <path
+                d="M65.351 5.99098C65.351 6.66466 64.8316 7.21805 64.1992 7.21805H63.0248V1.53985H64.1992C64.8316 1.53985 65.351 2.09323 65.351 2.79098V5.99098ZM64.1992 0H61.9634C61.7601 0 61.6021 0.19248 61.6021 0.384961C61.6021 0.384961 61.6021 0.384962 61.6021 0.409023V15.615C61.6021 15.8316 61.7601 16 61.9634 16H62.6861C62.8668 16 63.0248 15.8316 63.0248 15.615V8.75789H64.1992C65.622 8.75789 66.7964 7.53083 66.7964 5.99098V2.79098C66.7964 1.25113 65.622 0 64.1992 0Z"
+              />
+              <path
+                d="M72.3742 5.99098C72.3742 6.66466 71.8548 7.21805 71.2224 7.21805H70.0706V1.53985H71.2224C71.8548 1.53985 72.3742 2.09323 72.3742 2.79098V5.99098ZM73.8196 2.79098C73.8196 1.25113 72.6678 0 71.2224 0H69.3479C68.9414 0 68.6252 0.360902 68.6252 0.769924V15.615C68.6252 15.8316 68.7833 16 68.9866 16H69.7093C69.8899 16 70.0706 15.8316 70.0706 15.615V8.75789H71.2224C71.8548 8.75789 72.3742 9.31128 72.3742 10.009V15.615C72.3742 15.8316 72.5323 16 72.7355 16H73.4582C73.6615 16 73.8196 15.8316 73.8196 15.615V10.009C73.8196 9.21504 73.526 8.49323 73.0291 7.98797C73.526 7.48271 73.8196 6.78496 73.8196 5.99098V2.79098Z"
+              />
+              <path
+                d="M79.9988 13.2331C79.9988 13.9068 79.4794 14.4602 78.8471 14.4602C78.1921 14.4602 77.6727 13.9068 77.6727 13.2331V2.79098C77.6727 2.09323 78.1921 1.53985 78.8471 1.53985C79.4794 1.53985 79.9988 2.09323 79.9988 2.79098V13.2331ZM78.8471 0C77.4017 0 76.2273 1.25113 76.2273 2.79098V13.2331C76.2273 14.7729 77.4017 16 78.8471 16C80.2698 16 81.4442 14.7729 81.4442 13.2331V2.79098C81.4442 1.25113 80.2698 0 78.8471 0Z"
+              />
+              <path
+                d="M88.162 0H87.4393C87.2586 0 87.0779 0.16842 87.0779 0.384961V13.2331C87.0779 13.9068 86.5585 14.4602 85.9261 14.4602C85.2938 14.4602 84.7744 13.9068 84.7744 13.2331V12.3429C84.7744 12.1263 84.6163 11.9579 84.413 11.9579H83.6903C83.4871 11.9579 83.329 12.1263 83.329 12.3429V13.2331C83.329 14.7489 84.5033 16 85.9261 16C87.3715 16 88.5233 14.7489 88.5233 13.2331V0.384961C88.5233 0.16842 88.3652 0 88.162 0Z"
+              />
+              <path
+                d="M94.3164 1.53985C94.5197 1.53985 94.6778 1.37143 94.6778 1.15489V0.384961C94.6778 0.19248 94.5197 0 94.3164 0H91.6289C91.2224 0 90.9062 0.360902 90.9062 0.769924V15.2301C90.9062 15.6632 91.2224 16 91.6289 16H94.3164C94.5197 16 94.6778 15.8316 94.6778 15.615V14.8451C94.6778 14.6526 94.5197 14.4602 94.3164 14.4602H92.3516V8.78196H94.3164C94.5197 8.78196 94.6778 8.58947 94.6778 8.39699V7.62707C94.6778 7.41053 94.5197 7.24211 94.3164 7.24211H92.3516V1.53985H94.3164Z"
+              />
+              <path
+                d="M101.183 3.96992H101.905C102.109 3.96992 102.267 3.8015 102.267 3.58496V2.76692C102.267 1.25113 101.092 0 99.6695 0C98.2241 0 97.0723 1.25113 97.0723 2.76692V13.2331C97.0723 14.7489 98.2241 16 99.6695 16C101.092 16 102.267 14.7489 102.267 13.2331V12.3429C102.267 12.1263 102.109 11.9579 101.905 11.9579H101.183C100.979 11.9579 100.821 12.1263 100.821 12.3429V13.2331C100.821 13.9068 100.302 14.4602 99.6695 14.4602C99.0372 14.4602 98.5177 13.9068 98.5177 13.2331V2.76692C98.5177 2.09323 99.0372 1.53985 99.6695 1.53985C100.302 1.53985 100.821 2.09323 100.821 2.76692V3.58496C100.821 3.8015 100.979 3.96992 101.183 3.96992Z"
+              />
+              <path
+                d="M107.77 0H104.292C104.089 0 103.931 0.19248 103.931 0.384961V1.15489C103.931 1.37143 104.089 1.53985 104.292 1.53985H105.309V15.615C105.309 15.8316 105.467 16 105.67 16H106.393C106.596 16 106.754 15.8316 106.754 15.615V1.53985H107.77C107.974 1.53985 108.132 1.37143 108.132 1.15489V0.384961C108.132 0.19248 107.974 0 107.77 0Z"
+              />
+            </svg>
+            <svg
+              style="width: 1.5em; height: 1.5em"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z"
+              />
+              <path
+                d="M15.6776 4H15.0327C14.8715 4 14.7103 4.15813 14.7103 4.36145V16.2274C14.7103 16.363 14.6902 16.4759 14.67 16.5889L13.6826 18.5316L12.7154 16.5889C12.6751 16.4759 12.6549 16.363 12.6549 16.2274V4.36145C12.6549 4.15813 12.5139 4 12.3325 4H11.6877C11.5063 4 11.3652 4.15813 11.3652 4.36145V16.2274C11.3652 16.363 11.3451 16.4759 11.3048 16.5889L10.3174 18.5316L9.35013 16.5889C9.30983 16.4759 9.28967 16.363 9.28967 16.2274V4.36145C9.28967 4.15813 9.14861 4 8.96725 4H8.32242C8.14106 4 8 4.15813 8 4.36145V16.2274C8 16.747 8.14106 17.244 8.40302 17.6732L9.49119 19.8193C9.53149 19.9322 9.65239 20 9.7733 20H10.8816C11.0025 20 11.1033 19.9322 11.1637 19.8193L12.0101 18.1702L12.8363 19.8193C12.8967 19.9322 12.9975 20 13.1184 20H14.2469C14.3678 20 14.4685 19.9322 14.529 19.8193L15.6171 17.6732C15.8589 17.244 16 16.747 16 16.2274V4.36145C16 4.15813 15.8589 4 15.6776 4Z"
+              />
+            </svg>
+          </section>
+
+          <section style="display: flex">
+            <div class="color--grading" style="aspect-ratio: 1">
+              <img
+                src="https://images.unsplash.com/photo-1516417156595-3ca5df62a3a4?auto=format&fit=crop&w=1024&h=1024&q=80"
+              />
+              <div class="color"></div>
+              <div class="normal"></div>
+              <div class="multiply"></div>
+            </div>
+            <div
+              class="color--grading"
+              style="
+                aspect-ratio: 1;
+                --color--grading--color: var(--palette--secondary);
+              "
+            >
+              <img
+                src="https://images.unsplash.com/photo-1573595283891-b3d46b2096bb?auto=format&fit=crop&w=1024&h=1024&q=80"
+              />
+              <div class="color"></div>
+              <div class="lighten"></div>
+              <div class="darken"></div>
+            </div>
+            <div
+              class="color--grading"
+              style="
+                aspect-ratio: 1;
+                --color--grading--color: var(--palette--secondary);
+              "
+            >
+              <img
+                src="
+              https://images.unsplash.com/photo-1495559493698-ae68846c94e8?auto=format&fit=crop&w=1024&h=1024&q=80"
+              />
+              <div class="color"></div>
+              <div class="normal"></div>
+            </div>
+          </section>
+
+          <section>
+            <figure>
+              <blockquote cite="https://www.huxley.net/bnw/four.html">
+                <p>
+                  Words can be like X-rays, if you use them properly—they’ll go
+                  through anything. You read and you’re pierced.
+                </p>
+              </blockquote>
+              <figcaption>
+                Aldous Huxley, <cite>Brave New World</cite>
+              </figcaption>
+            </figure>
+
+            <figure>
+              <img
+                src="https://images.unsplash.com/photo-1518019671582-55004f1bc9ab"
+                alt="A stack of undyed linen"
+              />
+              <figcaption>A stack of undyed linen</figcaption>
+            </figure>
+
+            <figure>
+              <audio
+                controls
+                src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3"
+              >
+                Your browser does not support the
+                <code>audio</code> element.
+              </audio>
+              <figcaption>A rather kitsch "t-rex" roar</figcaption>
+            </figure>
+
+            <figure>
+              <video controls>
+                <source
+                  src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
+                  type="video/webm"
+                />
+                <source
+                  src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+                  type="video/mp4"
+                />
+                Your browser doesn't support embedded videos.
+              </video>
+              <figcaption>Timelapse of a blooming flower</figcaption>
+            </figure>
+
+            <details>
+              <summary><h5>Details</h5></summary>
+              <p>Something small enough to escape casual notice.</p>
+            </details>
+
+            <ul>
+              <li>apples</li>
+              <li>banana</li>
+              <li>
+                cherries
+                <ol>
+                  <li>black <br />cherries</li>
+                  <li>red cherries</li>
+                </ol>
+              </li>
+            </ul>
+
+            <ol>
+              <li>apples</li>
+              <li>banana</li>
+              <li>
+                cherries
+                <ul>
+                  <li>black <br />cherries</li>
+                  <li>red cherries</li>
+                </ul>
+              </li>
+            </ol>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>Number</th>
+                  <th>Roman</th>
+                  <th>Japanese</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>i</td>
+                  <td>一</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>ii</td>
+                  <td>二</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>iii</td>
+                  <td>三</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="layout--container--grid">
+            <section class="layout--container--flex">
+              <button class="ui--button --icon-start --icon-end">
+                <div class="ui--token--background">
+                  <div class="ui--token--background--background"></div>
+                  <div class="ui--token--background--border"></div>
+                </div>
+                <div class="ui--token--tint"></div>
+                <div class="ui--token--content">
+                  <span class="token--icon">spa</span>
+                </div>
+                <div class="ui--token--border"></div>
+              </button>
+              <button class="ui--button --icon-start">
+                <div class="ui--token--background">
+                  <div class="ui--token--background--background"></div>
+                  <div class="ui--token--background--border"></div>
+                </div>
+                <div class="ui--token--tint"></div>
+                <div class="ui--token--content">
+                  <span class="token--icon">spa</span>
+                  <span class="token--label--button">Value</span>
+                </div>
+                <div class="ui--token--border"></div>
+              </button>
+              <button class="ui--button --error --icon-start">
+                <div class="ui--token--background">
+                  <div class="ui--token--background--background"></div>
+                  <div class="ui--token--background--border"></div>
+                </div>
+                <div class="ui--token--tint"></div>
+                <div class="ui--token--content">
+                  <span class="token--icon">spa</span>
+                  <span class="token--label--button">Value</span>
+                </div>
+                <div class="ui--token--border"></div>
+              </button>
+              <button class="ui--button --disabled --icon-start">
+                <div class="ui--token--background">
+                  <div class="ui--token--background--background"></div>
+                  <div class="ui--token--background--border"></div>
+                </div>
+                <div class="ui--token--tint"></div>
+                <div class="ui--token--content">
+                  <span class="token--icon">spa</span>
+                  <span class="token--label--button">Value</span>
+                </div>
+                <div class="ui--token--border"></div>
+              </button>
+              <button class="ui--button --icon-end">
+                <div class="ui--token--background">
+                  <div class="ui--token--background--background"></div>
+                  <div class="ui--token--background--border"></div>
+                </div>
+                <div class="ui--token--tint"></div>
+                <div class="ui--token--content">
+                  <span class="token--label--button">Value</span>
+                  <span class="token--icon">arrow_forward</span>
+                </div>
+                <div class="ui--token--border"></div>
+              </button>
+              <button class="ui--button --icon-start --icon-end">
+                <div class="ui--token--background">
+                  <div class="ui--token--background--background"></div>
+                  <div class="ui--token--background--border"></div>
+                </div>
+                <div class="ui--token--tint"></div>
+                <div class="ui--token--content">
+                  <span class="token--icon">spa</span>
+                  <span class="token--label--button">Value</span>
+                  <span class="token--icon">arrow_forward</span>
+                </div>
+                <div class="ui--token--border"></div>
+              </button>
+            </section>
+            <section
+              class="layout--container--flex --primary"
+              style="pointer-events: none"
+            >
+              <div class="ui--button --primary">
+                <div class="ui--token--background">
+                  <div class="ui--token--background--background"></div>
+                  <div class="ui--token--background--border"></div>
+                </div>
+                <div class="ui--token--tint"></div>
+                <div class="ui--token--content">
+                  <span class="token--label--button">Value</span>
+                </div>
+                <div class="ui--token--border"></div>
+              </div>
+              <div class="ui--button --primary --focused">
+                <div class="ui--token--background">
+                  <div class="ui--token--background--background"></div>
+                  <div class="ui--token--background--border"></div>
+                </div>
+                <div class="ui--token--tint"></div>
+                <div class="ui--token--content">
+                  <span class="token--label--button">Value</span>
+                </div>
+                <div class="ui--token--border"></div>
+              </div>
+              <div class="ui--button --primary --selected">
+                <div class="ui--token--background">
+                  <div class="ui--token--background--background"></div>
+                  <div class="ui--token--background--border"></div>
+                </div>
+                <div class="ui--token--tint"></div>
+                <div class="ui--token--content">
+                  <span class="token--label--button">Value</span>
+                </div>
+                <div class="ui--token--border"></div>
+              </div>
+              <div class="ui--button --primary --focused --selected">
+                <div class="ui--token--background">
+                  <div class="ui--token--background--background"></div>
+                  <div class="ui--token--background--border"></div>
+                </div>
+                <div class="ui--token--tint"></div>
+                <div class="ui--token--content">
+                  <span class="token--label--button">Value</span>
+                </div>
+                <div class="ui--token--border"></div>
+              </div>
+            </section>
+            <section
+              class="layout--container--flex --primary"
+              style="pointer-events: none"
+            >
+              <div class="ui--button --primary --error">
+                <div class="ui--token--background">
+                  <div class="ui--token--background--background"></div>
+                  <div class="ui--token--background--border"></div>
+                </div>
+                <div class="ui--token--tint"></div>
+                <div class="ui--token--content">
+                  <span class="token--label--button">Value</span>
+                </div>
+                <div class="ui--token--border"></div>
+              </div>
+              <div class="ui--button --primary --error --focused">
+                <div class="ui--token--background">
+                  <div class="ui--token--background--background"></div>
+                  <div class="ui--token--background--border"></div>
+                </div>
+                <div class="ui--token--tint"></div>
+                <div class="ui--token--content">
+                  <span class="token--label--button">Value</span>
+                </div>
+                <div class="ui--token--border"></div>
+              </div>
+              <div class="ui--button --primary --error --selected">
+                <div class="ui--token--background">
+                  <div class="ui--token--background--background"></div>
+                  <div class="ui--token--background--border"></div>
+                </div>
+                <div class="ui--token--tint"></div>
+                <div class="ui--token--content">
+                  <span class="token--label--button">Value</span>
+                </div>
+                <div class="ui--token--border"></div>
+              </div>
+              <div class="ui--button --primary --error --focused --selected">
+                <div class="ui--token--background">
+                  <div class="ui--token--background--background"></div>
+                  <div class="ui--token--background--border"></div>
+                </div>
+                <div class="ui--token--tint"></div>
+                <div class="ui--token--content">
+                  <span class="token--label--button">Value</span>
+                </div>
+                <div class="ui--token--border"></div>
+              </div>
+            </section>
+            <section
+              class="layout--container--flex --secondary"
+              style="pointer-events: none"
+            >
+              <div class="ui--button --secondary">
+                <div class="ui--token--background">
+                  <div class="ui--token--background--background"></div>
+                  <div class="ui--token--background--border"></div>
+                </div>
+                <div class="ui--token--tint"></div>
+                <div class="ui--token--content">
+                  <span class="token--label--button">Value</span>
+                </div>
+                <div class="ui--token--border"></div>
+              </div>
+              <div class="ui--button --secondary --focused">
+                <div class="ui--token--background">
+                  <div class="ui--token--background--background"></div>
+                  <div class="ui--token--background--border"></div>
+                </div>
+                <div class="ui--token--tint"></div>
+                <div class="ui--token--content">
+                  <span class="token--label--button">Value</span>
+                </div>
+                <div class="ui--token--border"></div>
+              </div>
+              <div class="ui--button --secondary --selected">
+                <div class="ui--token--background">
+                  <div class="ui--token--background--background"></div>
+                  <div class="ui--token--background--border"></div>
+                </div>
+                <div class="ui--token--tint"></div>
+                <div class="ui--token--content">
+                  <span class="token--label--button">Value</span>
+                </div>
+                <div class="ui--token--border"></div>
+              </div>
+              <div class="ui--button --secondary --focused --selected">
+                <div class="ui--token--background">
+                  <div class="ui--token--background--background"></div>
+                  <div class="ui--token--background--border"></div>
+                </div>
+                <div class="ui--token--tint"></div>
+                <div class="ui--token--content">
+                  <span class="token--label--button">Value</span>
+                </div>
+                <div class="ui--token--border"></div>
+              </div>
+            </section>
+            <section
+              class="layout--container--flex --tertiary"
+              style="pointer-events: none"
+            >
+              <div class="ui--button --tertiary">
+                <div class="ui--token--background">
+                  <div class="ui--token--background--background"></div>
+                  <div class="ui--token--background--border"></div>
+                </div>
+                <div class="ui--token--tint"></div>
+                <div class="ui--token--content">
+                  <span class="token--label--button">Value</span>
+                </div>
+                <div class="ui--token--border"></div>
+              </div>
+              <div class="ui--button --tertiary --focused">
+                <div class="ui--token--background">
+                  <div class="ui--token--background--background"></div>
+                  <div class="ui--token--background--border"></div>
+                </div>
+                <div class="ui--token--tint"></div>
+                <div class="ui--token--content">
+                  <span class="token--label--button">Value</span>
+                </div>
+                <div class="ui--token--border"></div>
+              </div>
+              <div class="ui--button --tertiary --selected">
+                <div class="ui--token--background">
+                  <div class="ui--token--background--background"></div>
+                  <div class="ui--token--background--border"></div>
+                </div>
+                <div class="ui--token--tint"></div>
+                <div class="ui--token--content">
+                  <span class="token--label--button">Value</span>
+                </div>
+                <div class="ui--token--border"></div>
+              </div>
+              <div class="ui--button --tertiary --focused --selected">
+                <div class="ui--token--background">
+                  <div class="ui--token--background--background"></div>
+                  <div class="ui--token--background--border"></div>
+                </div>
+                <div class="ui--token--tint"></div>
+                <div class="ui--token--content">
+                  <span class="token--label--button">Value</span>
+                </div>
+                <div class="ui--token--border"></div>
+              </div>
+            </section>
+            <section
+              class="layout--container--flex --primary --featured"
+              style="pointer-events: none"
+            >
+              <div class="ui--button --primary --featured">
+                <div class="ui--token--background">
+                  <div class="ui--token--background--background"></div>
+                  <div class="ui--token--background--border"></div>
+                </div>
+                <div class="ui--token--tint"></div>
+                <div class="ui--token--content">
+                  <span class="token--label--button">Value</span>
+                </div>
+                <div class="ui--token--border"></div>
+              </div>
+              <div class="ui--button --primary --featured --focused">
+                <div class="ui--token--background">
+                  <div class="ui--token--background--background"></div>
+                  <div class="ui--token--background--border"></div>
+                </div>
+                <div class="ui--token--tint"></div>
+                <div class="ui--token--content">
+                  <span class="token--label--button">Value</span>
+                </div>
+                <div class="ui--token--border"></div>
+              </div>
+              <div class="ui--button --primary --featured --selected">
+                <div class="ui--token--background">
+                  <div class="ui--token--background--background"></div>
+                  <div class="ui--token--background--border"></div>
+                </div>
+                <div class="ui--token--tint"></div>
+                <div class="ui--token--content">
+                  <span class="token--label--button">Value</span>
+                </div>
+                <div class="ui--token--border"></div>
+              </div>
+              <div class="ui--button --primary --featured --focused --selected">
+                <div class="ui--token--background">
+                  <div class="ui--token--background--background"></div>
+                  <div class="ui--token--background--border"></div>
+                </div>
+                <div class="ui--token--tint"></div>
+                <div class="ui--token--content">
+                  <span class="token--label--button">Value</span>
+                </div>
+                <div class="ui--token--border"></div>
+              </div>
+            </section>
+            <section
+              class="layout--container--flex --secondary --featured"
+              style="pointer-events: none"
+            >
+              <div class="ui--button --secondary --featured">
+                <div class="ui--token--background">
+                  <div class="ui--token--background--background"></div>
+                  <div class="ui--token--background--border"></div>
+                </div>
+                <div class="ui--token--tint"></div>
+                <div class="ui--token--content">
+                  <span class="token--label--button">Value</span>
+                </div>
+                <div class="ui--token--border"></div>
+              </div>
+              <div class="ui--button --secondary --featured --focused">
+                <div class="ui--token--background">
+                  <div class="ui--token--background--background"></div>
+                  <div class="ui--token--background--border"></div>
+                </div>
+                <div class="ui--token--tint"></div>
+                <div class="ui--token--content">
+                  <span class="token--label--button">Value</span>
+                </div>
+                <div class="ui--token--border"></div>
+              </div>
+              <div class="ui--button --secondary --featured --selected">
+                <div class="ui--token--background">
+                  <div class="ui--token--background--background"></div>
+                  <div class="ui--token--background--border"></div>
+                </div>
+                <div class="ui--token--tint"></div>
+                <div class="ui--token--content">
+                  <span class="token--label--button">Value</span>
+                </div>
+                <div class="ui--token--border"></div>
+              </div>
+              <div
+                class="ui--button --secondary --featured --focused --selected"
+              >
+                <div class="ui--token--background">
+                  <div class="ui--token--background--background"></div>
+                  <div class="ui--token--background--border"></div>
+                </div>
+                <div class="ui--token--tint"></div>
+                <div class="ui--token--content">
+                  <span class="token--label--button">Value</span>
+                </div>
+                <div class="ui--token--border"></div>
+              </div>
+            </section>
+            <section
+              class="layout--container--flex --tertiary --featured"
+              style="pointer-events: none"
+            >
+              <div class="ui--button --tertiary --featured">
+                <div class="ui--token--background">
+                  <div class="ui--token--background--background"></div>
+                  <div class="ui--token--background--border"></div>
+                </div>
+                <div class="ui--token--tint"></div>
+                <div class="ui--token--content">
+                  <span class="token--label--button">Value</span>
+                </div>
+                <div class="ui--token--border"></div>
+              </div>
+              <div class="ui--button --tertiary --featured --focused">
+                <div class="ui--token--background">
+                  <div class="ui--token--background--background"></div>
+                  <div class="ui--token--background--border"></div>
+                </div>
+                <div class="ui--token--tint"></div>
+                <div class="ui--token--content">
+                  <span class="token--label--button">Value</span>
+                </div>
+                <div class="ui--token--border"></div>
+              </div>
+              <div class="ui--button --tertiary --featured --selected">
+                <div class="ui--token--background">
+                  <div class="ui--token--background--background"></div>
+                  <div class="ui--token--background--border"></div>
+                </div>
+                <div class="ui--token--tint"></div>
+                <div class="ui--token--content">
+                  <span class="token--label--button">Value</span>
+                </div>
+                <div class="ui--token--border"></div>
+              </div>
+              <div
+                class="ui--button --tertiary --featured --focused --selected"
+              >
+                <div class="ui--token--background">
+                  <div class="ui--token--background--background"></div>
+                  <div class="ui--token--background--border"></div>
+                </div>
+                <div class="ui--token--tint"></div>
+                <div class="ui--token--content">
+                  <span class="token--label--button">Value</span>
+                </div>
+                <div class="ui--token--border"></div>
+              </div>
+            </section>
+          </section>
+
+          <section class="layout--container--grid">
+            <section class="layout--container--flex">
+              <div class="ui--textinput --icon-start">
+                <div class="ui--token--background">
+                  <div class="ui--token--background--background"></div>
+                  <div class="ui--token--background--border"></div>
+                </div>
+                <div class="ui--token--tint"></div>
+                <div class="ui--token--content">
+                  <span class="token--icon">spa</span>
+                  <span class="token--value ui--token--content--input"
+                    >Value</span
+                  >
+                </div>
+                <div class="ui--token--border"></div>
+              </div>
+              <div class="ui--textinput --icon-end">
+                <div class="ui--token--background">
+                  <div class="ui--token--background--background"></div>
+                  <div class="ui--token--background--border"></div>
+                </div>
+                <div class="ui--token--tint"></div>
+                <div class="ui--token--content">
+                  <span class="token--value ui--token--content--input"
+                    >Value</span
+                  >
+                  <span class="token--icon">arrow_forward</span>
+                </div>
+                <div class="ui--token--border"></div>
+              </div>
+              <div class="ui--textinput --icon-start --icon-end">
+                <div class="ui--token--background">
+                  <div class="ui--token--background--background"></div>
+                  <div class="ui--token--background--border"></div>
+                </div>
+                <div class="ui--token--tint"></div>
+                <div class="ui--token--content">
+                  <span class="token--icon">spa</span>
+                  <span class="token--value ui--token--content--input"
+                    >Value</span
+                  >
+                  <span class="token--icon">arrow_forward</span>
+                </div>
+                <div class="ui--token--border"></div>
+              </div>
+            </section>
+            <section class="layout--container--flex">
+              <div class="ui--textinput --icon-start --area">
+                <div class="ui--token--background">
+                  <div class="ui--token--background--background"></div>
+                  <div class="ui--token--background--border"></div>
+                </div>
+                <div class="ui--token--tint"></div>
+                <div class="ui--token--content">
+                  <span class="token--icon">spa</span>
+                  <textarea
+                    cols="30"
+                    rows="3"
+                    class="token--value ui--token--content--input"
+                  >
+Value</textarea
+                  >
+                </div>
+                <div class="ui--token--border"></div>
+              </div>
+            </section>
+            <section
+              class="layout--container--flex"
+              style="pointer-events: none"
+            >
+              <div class="ui--textinput">
+                <div class="ui--token--background">
+                  <div class="ui--token--background--background"></div>
+                  <div class="ui--token--background--border"></div>
+                </div>
+                <div class="ui--token--tint"></div>
+                <div class="ui--token--content">
+                  <span class="token--value ui--token--content--input"
+                    >Value</span
+                  >
+                </div>
+                <div class="ui--token--border"></div>
+              </div>
+              <div class="ui--textinput --focused">
+                <div class="ui--token--background">
+                  <div class="ui--token--background--background"></div>
+                  <div class="ui--token--background--border"></div>
+                </div>
+                <div class="ui--token--tint"></div>
+                <div class="ui--token--content">
+                  <span class="token--value ui--token--content--input"
+                    >Value</span
+                  >
+                </div>
+                <div class="ui--token--border"></div>
+              </div>
+              <div class="ui--textinput --selected">
+                <div class="ui--token--background">
+                  <div class="ui--token--background--background"></div>
+                  <div class="ui--token--background--border"></div>
+                </div>
+                <div class="ui--token--tint"></div>
+                <div class="ui--token--content">
+                  <span class="token--value ui--token--content--input"
+                    >Value</span
+                  >
+                </div>
+                <div class="ui--token--border"></div>
+              </div>
+              <div class="ui--textinput --focused --selected">
+                <div class="ui--token--background">
+                  <div class="ui--token--background--background"></div>
+                  <div class="ui--token--background--border"></div>
+                </div>
+                <div class="ui--token--tint"></div>
+                <div class="ui--token--content">
+                  <span class="token--value ui--token--content--input"
+                    >Value</span
+                  >
+                </div>
+                <div class="ui--token--border"></div>
+              </div>
+            </section>
+          </section>
+
+          <section style="display: flex">
+            <div class="ui--separator">
+              <span class="token--label--small">Separator</span>
+              <hr />
+            </div>
+            <div class="ui--separator">
+              <hr />
+              <span class="token--label--small">Separator</span>
+              <hr />
+            </div>
+            <div class="ui--separator">
+              <hr />
+              <span class="token--label--small">Separator</span>
+            </div>
+          </section>
+          <section style="display: flex">
+            <div class="ui--separator --no-line">
+              <span class="token--label--small">Separator</span>
+              <hr />
+            </div>
+            <div class="ui--separator --no-line">
+              <hr />
+              <span class="token--label--small">Separator</span>
+              <hr />
+            </div>
+            <div class="ui--separator --no-line">
+              <hr />
+              <span class="token--label--small">Separator</span>
+            </div>
+          </section>
+
+          <section>
+            <div class="ui--separator --heavy">
+              <h2>Separator</h2>
+              <hr />
+              <h5>Separator</h5>
+            </div>
+            <div class="ui--separator --heavy">
+              <hr />
+              <h3>Separator</h3>
+              <hr />
+            </div>
+            <div class="ui--separator">
+              <hr />
+              <span class="token--label--small">Separator</span>
+            </div>
+          </section>
+
+          <section>
+            <details>
+              <summary>
+                <div class="ui--separator --heavy">
+                  <h3>Summary</h3>
+                  <hr />
+                  <span class="token--icon">add</span>
+                </div>
+              </summary>
+              <p>
+                Thus, <em>in precise usage</em>, the words
+                <strong>breathing</strong> and <strong>ventilation</strong> are
+                <a href="#">hyponyms</a>, <mark>not synonyms</mark>, of
+                respiration; but this prescription is not consistently followed,
+                even by most health care providers, because the term respiratory
+                rate (RR) is a well-established term in health care, even though
+                it would need to be consistently replaced with ventilation rate
+                if the precise usage were to be followed.
+              </p>
+            </details>
+          </section>
+        </section>
+      </details>
+    </section>
+
+    <script type="module" src="/index.js"></script>
+  </body>
+</html>

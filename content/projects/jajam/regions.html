@@ -1,0 +1,117 @@
+<main class="layout--container--grid layout--leading--none layout--lining--none">
+    <link href="/projects/jajam/index.css" rel="stylesheet">
+
+    <nav id="header" class="layout--container--grid layout--bleeding layout--leading--none layout--lining--none"
+        style="background: var(--palette--lightest); color: var(--palette--primary);">
+        <div id="nav--subpages" class="ui--subnav layout--container--flex layout--leading--thin layout--spacing"
+            style="padding-block: 1em;
+            --ui--base--font--weight: 700;
+">
+            <ui--button tabindex="0" tier="quinary" link="" target="_self" href="/projects/jajam">
+                People's Textile
+            </ui--button>
+            <hr>
+            <ui--button tabindex="0" tier="quinary" link="" target="_self" href="/projects/jajam/features">
+                The Journey
+            </ui--button>
+            <hr>
+            <ui--button tabindex="0" tier="quinary" link="" target="_self" href="/projects/jajam/regions"
+                class="currentPage">
+                Regional Jajam
+            </ui--button>
+        </div>
+
+
+        <section class="layout--container--stack layout--span--bleed">
+            <img class="cover layout--span--bleed" style="object-fit: cover;" src="/media/projects/jajam/jajam-exhibited.jpg">
+            <div class="layout--container--grid layout--bleeding layout--leading--thick layout--lining">
+                <div class="title layout--container--grid --center layout--lining--thick">
+                    <h1 style="opacity: 75%; font-weight: 200; color: var(--palette--darkest);">Regional Jajam</h1>
+                    <h4 style="opacity: 100%; letter-spacing: 1ch; color: var(--palette--primary);">Rajasthan</h4>
+                </div>
+            </div>
+            <style>
+                @media(width < 500px) {
+                    #header .title {
+                        padding-block: 0;
+                    }
+                }
+                @media(width < 714px) {
+                    #header .cover {
+                        aspect-ratio: 1 / 1;
+                    }
+                }
+            </style>
+        </section>
+    </nav>
+
+    <section id="blurb" class="layout--container--grid layout--bleeding layout--leading--thick layout--lining--thick">
+        <section class="layout--container--grid --center layout--leading--thick">
+            <h2>Regions of Rajasthan</h2>
+
+            <blockquote>
+                <p>
+                    Rajputana, as Rajasthan was previously known was subdivided into several regional units for ease of
+                    administration. Approaching the Jajam research on these regional basis brings out the uniqueness of
+                    Jajam in colors, motifs, nuances and themes with respect to each region.
+                </p>
+            </blockquote>
+        </section>
+        <section class="regions layout--container--grid">
+            <a href="/projects/jajam/region-ajmer" class="layout--span--half" style="background-image: url(/media/projects/jajam/regions/block.harmonic-ajmer.png)">
+                <h3>Ajmer</h3>
+                <p tabindex="0" tier="quinary" link="" target="_blank" href="/projects/jajam" class="currentPage">
+                    Jotayan, Shreenagar, Pushkar, Akoria
+                </p>
+            </a>
+            <a href="/projects/jajam/region-dhundhar" class="layout--span--half" style="background-image: url(/media/projects/jajam/regions/block.harmonic-dhundhar.png)">
+                <h3>Dhundhar</h3>
+                <p tabindex="0" tier="quinary" link="" target="_blank" href="/projects/jajam" class="currentPage">
+                    Jahota, Jairampura, Jaipur, Bagru
+                </p>
+            </a>
+            <a href="/projects/jajam/region-marwar" class="layout--span--half" style="background-image: url(/media/projects/jajam/regions/block.harmonic-marwar.png)">
+                <h3>Marwar</h3>
+                <p tabindex="0" tier="quinary" link="" target="_blank" href="/projects/jajam" class="currentPage">
+                    Barmer, Balotra, Samdari, Jodhpur
+                </p>
+            </a>
+            <a href="/projects/jajam/region-hadoti" class="layout--span--half" style="background-image: url(/media/projects/jajam/regions/block.harmonic-hadoti.png)">
+                <h3>Hadoti</h3>
+                <p tabindex="0" tier="quinary" link="" target="_blank" href="/projects/jajam" class="currentPage">
+                    Kota, Bundi, Jhalawar, Baran
+                </p>
+            </a>
+            <a href="/projects/jajam/region-mewar" class="layout--span--half" style="background-image: url(/media/projects/jajam/regions/block.harmonic-mewar.png)">
+                <h3>Mewar</h3>
+                <p tabindex="0" tier="quinary" link="" target="_blank" href="/projects/jajam" class="currentPage">
+                    Udaipur, Rajsamand, Bhilwara, Chittorgarh
+                </p>
+            </a>
+            <a href="/projects/jajam/region-shekhawati" class="layout--span--half" style="background-image: url(/media/projects/jajam/regions/block.harmonic-sekhawati.png)">
+                <h3>Shekhawati</h3>
+                <p tabindex="0" tier="quinary" link="" target="_blank" href="/projects/jajam" class="currentPage">
+                    Jhunjhunu, Sikar, Churu
+                </p>
+            </a>
+        </section>
+        <style>
+            #blurb .regions > * {
+                aspect-ratio: 1 / 1;
+                padding: var(--m2);
+                display: grid;
+                gap: var(--m0);
+                align-content: center;
+                justify-items: center;
+                text-align: center;
+                text-decoration: none;
+                color: var(--palette--lightest);
+                background-position: center;
+                background-size: cover;
+            }
+            #blurb .regions > * > h3 {
+                opacity: 100%;
+            }
+        </style>
+    </section>
+</main>

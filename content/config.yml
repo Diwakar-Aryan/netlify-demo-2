@@ -1,0 +1,1083 @@
+backend:
+  name: github
+  repo: WabisabiProject/wabisabi-fecund
+  branch: main
+  # name: git-gateway
+local_backend: true
+
+media_folder: /media/
+public_folder: /media/
+
+preview: false
+
+collections:
+  - name: singletons
+
+    label: Singletons
+    label_singular: Singleton
+
+    files:
+      - name: palettes
+        label: Palettes
+        file: content/singletons/palettes.md
+        fields:
+          - name: default
+            label: Default
+            widget: object
+            fields:
+              - name: primary
+                label: Primary Color
+                widget: color
+                default: '#972E34'
+                allowInput: true
+              - name: secondary
+                label: Secondary Color
+                widget: color
+                default: '#E1CCB4'
+                allowInput: true
+          - name: neutral
+            label: Neutral
+            widget: object
+            fields:
+              - name: primary
+                label: Primary Color
+                widget: color
+                default: '#656565'
+                allowInput: true
+              - name: secondary
+                label: Secondary Color
+                widget: color
+                default: '#dfdfdf'
+                allowInput: true
+
+      - name: home
+        label: The Homepage
+        file: content/singletons/home.md
+        fields:
+          - name: cover
+            label: Cover Image
+            widget: image
+            allow_multiple: false
+            media_folder: '/media/galleries/'
+          - name: description
+            label: Description
+            widget: string
+            required: false
+          - name: blurb
+            label: Blurb
+            required: false
+            widget: markdown
+            buttons: [bold, italic]
+            editor_components: []
+            minimal: true
+          - name: callout
+            label: Callout
+            required: false
+            widget: markdown
+            buttons: [bold, italic]
+            editor_components: []
+            minimal: true
+          - name: body
+            label: Body
+            widget: markdown
+
+      - name: account
+        label: Account Page
+        file: content/singletons/account.md
+        fields:
+          - name: cover
+            label: Cover Image
+            widget: image
+            allow_multiple: false
+            media_folder: '/media/galleries/'
+          - name: description
+            label: Description
+            widget: string
+            required: false
+
+      - name: contact
+        label: Contact Us
+        file: content/singletons/contact.md
+        fields:
+          - name: cover
+            label: Cover Image
+            widget: image
+            allow_multiple: false
+            media_folder: '/media/galleries/'
+          - name: description
+            label: Description
+            widget: string
+            required: false
+          - name: blurb
+            label: Blurb
+            required: false
+            widget: markdown
+            buttons: [bold, italic]
+            editor_components: []
+            minimal: true
+          - name: callout
+            label: Callout
+            required: false
+            widget: markdown
+            buttons: [bold, italic]
+            editor_components: []
+            minimal: true
+          - name: body
+            label: Body
+            widget: markdown
+          - name: comments
+            label: Input Comments
+            widget: object
+            fields:
+              - name: personal
+                label: Personal Details
+                widget: string
+              - name: topic
+                label: Topic Selection
+                widget: string
+              - name: optional-excursions
+                label: Optional Excursions
+                widget: string
+
+      - name: terms
+        label: Terms & Conditions
+        file: content/singletons/terms.md
+        fields:
+          - name: tile
+            label: Title
+            widget: string
+          - name: description
+            label: Description
+            widget: string
+            required: false
+          - name: body
+            label: Body
+            widget: markdown
+
+      - name: privacy
+        label: Privacy Policy
+        file: content/singletons/privacy.md
+        fields:
+          - name: description
+            label: Description
+            widget: string
+            required: false
+          - name: body
+            label: Body
+            widget: markdown
+
+      - name: returns
+        label: Return Policy
+        file: content/singletons/returns.md
+        fields:
+          - name: description
+            label: Description
+            widget: string
+            required: false
+          - name: body
+            label: Body
+            widget: markdown
+
+      - name: pandemic
+        label: Pandemic Measures
+        file: content/singletons/pandemic.md
+        fields:
+          - name: title
+            label: Title
+            widget: string
+          - name: body
+            label: Body
+            widget: markdown
+
+      - name: workshops
+        label: Workshops Index
+        file: content/singletons/workshops.md
+        fields:
+          - name: cover
+            label: Cover Image
+            widget: image
+            allow_multiple: false
+            media_folder: '/media/galleries/'
+          - name: description
+            label: Description
+            widget: string
+            required: false
+          - name: blurb
+            label: Blurb
+            required: false
+            widget: markdown
+            buttons: [bold, italic]
+            editor_components: []
+            minimal: true
+          - name: callout
+            label: Callout
+            required: false
+            widget: markdown
+            buttons: [bold, italic]
+            editor_components: []
+            minimal: true
+          - name: body
+            label: Body
+            widget: markdown
+
+      - name: notes
+        label: Notes Index
+        file: content/singletons/notes.md
+        fields:
+          - name: cover
+            label: Cover Image
+            widget: image
+            allow_multiple: false
+            media_folder: '/media/galleries/'
+          - name: description
+            label: Description
+            widget: string
+            required: false
+          - name: blurb
+            label: Blurb
+            required: false
+            widget: markdown
+            buttons: [bold, italic]
+            editor_components: []
+            minimal: true
+          - name: callout
+            label: Callout
+            required: false
+            widget: markdown
+            buttons: [bold, italic]
+            editor_components: []
+            minimal: true
+          - name: body
+            label: Body
+            widget: markdown
+
+      - name: links
+        label: Links
+        file: content/singletons/links.md
+        fields:
+          - name: platform
+            label: Platform Links
+            label_singular: Link
+            widget: list
+            summary: '{{fields.title}}'
+            fields:
+              - name: title
+                label: Title
+                widget: string
+              - name: link
+                label: link
+                widget: string
+          - name: social
+            label: Social Links
+            label_singular: Link
+            widget: list
+            summary: '{{fields.title}}'
+            fields:
+              - name: title
+                label: Title
+                widget: string
+              - name: link
+                label: link
+                widget: string
+          - name: info
+            label: Informational Links
+            label_singular: Link
+            widget: list
+            summary: '{{fields.title}}'
+            fields:
+              - name: title
+                label: Title
+                widget: string
+              - name: link
+                label: link
+                widget: string
+
+      - name: accolades
+        label: Accolades
+        file: content/singletons/accolades.md
+        fields:
+          - name: sources
+            label: Sources
+            label_singular: Source
+            widget: list
+            summary: '{{fields.title}}'
+            fields:
+              - name: title
+                label: Title
+                widget: string
+              - name: link
+                label: link
+                widget: string
+                required: false
+              - name: identity
+                label: Identity
+                widget: image
+                allow_multiple: false
+                media_folder: '/media/brands/'
+              - name: quote
+                label: Quote
+                widget: markdown
+                required: false
+                buttons: [bold, italic]
+                editor_components: []
+                minimal: true
+
+      - name: countries
+        label: Countries
+        file: content/singletons/countries.md
+        fields:
+          - name: countries
+            label: Countries
+            label_singular: Country
+            widget: list
+            collapsed: false
+            field:
+              name: country
+              label: Country
+              widget: string
+
+      - name: collections
+        label: Collections Index
+        file: content/singletons/collections.md
+        fields:
+          - name: cover
+            label: Cover Image
+            widget: image
+            allow_multiple: false
+            media_folder: '/media/galleries/'
+          - name: description
+            label: Description
+            widget: string
+            required: false
+          - name: blurb
+            label: Blurb
+            required: false
+            widget: markdown
+            buttons: [bold, italic]
+            editor_components: []
+            minimal: true
+          - name: callout
+            label: Callout
+            required: false
+            widget: markdown
+            buttons: [bold, italic]
+            editor_components: []
+            minimal: true
+          - name: body
+            label: Body
+            widget: markdown
+
+  - name: locations
+
+    label: Locations
+    label_singular: Location
+
+    create: true
+    folder: content/locations
+    media_folder: '/media/galleries/locations/{{slug}}/'
+
+    fields:
+      - name: title
+        label: Name
+        widget: string
+
+      - name: description
+        label: Description
+        widget: string
+        required: false
+
+      - name: blurb
+        label: Blurb
+        required: false
+        widget: markdown
+        buttons: [bold, italic]
+        editor_components: []
+        minimal: true
+
+      - name: body
+        label: Body
+        required: false
+        widget: markdown
+
+  - name: excursions
+
+    label: Excursions
+    label_singular: Excursion
+
+    create: true
+    folder: content/excursions
+    media_folder: '/media/galleries/workshops/{{slug}}/'
+
+    fields:
+      - name: title
+        label: Title
+        widget: string
+
+      - name: cover
+        label: Cover Image
+        widget: image
+        allow_multiple: false
+        
+      - name: description
+        label: Description
+        widget: string
+        required: false
+
+      - name: palette
+        label: Palette
+        widget: object
+        fields:
+          - name: primary
+            label: Primary Color
+            widget: color
+            default: '#972E34'
+            allowInput: true
+          - name: secondary
+            label: Secondary Color
+            widget: color
+            default: '#E1CCB4'
+            allowInput: true
+
+      - name: locations
+        label: Locations
+        widget: relation
+        collection: locations
+        search_fields: [title]
+        value_field: '{{slug}}'
+        allow_multiple: false
+
+      - name: duration
+        label: Duration in Hours
+        widget: number
+        default: 2
+        value_type: float
+        step: 0.5
+
+      - name: cost
+        label: Cost
+        widget: number
+
+      - name: blurb
+        label: Blurb
+        widget: markdown
+        buttons: [bold, italic]
+        editor_components: []
+        minimal: true
+
+      - name: top
+        label: Top Section
+        widget: object
+        fields:
+          - name: title
+            label: Title
+            widget: string
+          - name: text
+            label: Text
+            widget: markdown
+            buttons: [bold, italic]
+            editor_components: []
+            minimal: true
+          - name: poster
+            label: Poster
+            widget: object
+            fields:
+              - name: src 
+                label: Source
+                widget: image
+                allow_multiple: false
+              - name: alt
+                label: Alt Text
+                widget: string
+
+      - name: verso
+        label: Verso Section
+        widget: object
+        fields:
+          - name: text
+            label: Text
+            widget: markdown
+            buttons: [bold, italic]
+            editor_components: []
+            minimal: true
+          - name: video
+            label: Video
+            widget: object
+            fields:
+              - name: src 
+                label: Source
+                widget: file
+                allow_multiple: false
+              # - name: alt
+              #   label: Alt Text
+              #   widget: string
+          - name: image1
+            label: Image 1
+            widget: object
+            fields:
+              - name: src 
+                label: Source
+                widget: image
+                allow_multiple: false
+              - name: alt
+                label: Alt Text
+                widget: string
+          - name: image2
+            label: Image 2
+            widget: object
+            fields:
+              - name: src 
+                label: Source
+                widget: image
+                allow_multiple: false
+              - name: alt
+                label: Alt Text
+                widget: string
+
+      - name: recto
+        label: Recto Section
+        widget: object
+        fields:
+          - name: image1
+            label: Image 1
+            widget: object
+            fields:
+              - name: src 
+                label: Source
+                widget: image
+                allow_multiple: false
+              - name: alt
+                label: Alt Text
+                widget: string
+          - name: text
+            label: Text
+            widget: markdown
+            buttons: [bold, italic]
+            editor_components: []
+            minimal: true
+
+      - name: bottom
+        label: Bottom Section
+        widget: object
+        fields:
+          - name: image1
+            label: Image 1
+            widget: object
+            fields:
+              - name: src 
+                label: Source
+                widget: image
+                allow_multiple: false
+              - name: alt
+                label: Alt Text
+                widget: string
+          - name: image2
+            label: Image 2
+            widget: object
+            fields:
+              - name: src 
+                label: Source
+                widget: image
+                allow_multiple: false
+              - name: alt
+                label: Alt Text
+                widget: string
+
+      - name: gallery
+        label: Gallery
+        label_singular: Year
+        widget: list
+        collapsed: true
+        minimize_collapsed: true
+        summary: '{{fields.year}}'
+        add_to_top: true
+        fields:
+          - name: year
+            label: Year
+            widget: number
+          - name: instagram
+            label: Instagram Photos
+            label_singular: Photo
+            widget: list
+            minimize_collapsed: true
+            summary: '{{fields.link}}'
+            field:
+              name: link
+              label: link
+              widget: string
+          - name: our
+            label: Our Photos
+            label_singular: Photo
+            widget: list
+            minimize_collapsed: true
+            summary: '{{fields.image}}'
+            field:
+              name: image
+              label: Image
+              widget: object
+              fields:
+                - name: src 
+                  label: Source
+                  widget: image
+                  allow_multiple: false
+                - name: alt
+                  label: Alt Text
+                  widget: string
+
+      - name: quotes
+        label: Quotes
+        label_singular: Quote
+        widget: list
+        summary: '{{fields.author.title}}'
+        fields:
+          - name: quote
+            label: Quote
+            widget: markdown
+            buttons: [bold, italic]
+            editor_components: []
+            minimal: true
+          - name: author
+            label: Author
+            widget: object
+            fields:
+              - name: title
+                label: Name
+                widget: string
+              - name: avatar
+                label: Avatar
+                widget: image
+                allow_multiple: false
+                media_folder: /media/people/
+                default: /media/people/placeholder.png
+
+      - name: body
+        label: Body
+        required: false
+        widget: markdown
+
+  - name: programs
+
+    label: Programs
+    label_singular: Program
+
+    create: true
+    folder: content/programs
+    media_folder: '/media/galleries/workshops/{{slug}}/'
+
+    fields:
+      - name: title
+        label: Title
+        widget: string
+
+      - name: cover
+        label: Cover Image
+        widget: image
+        allow_multiple: false
+
+      - name: coverposition
+        label: Cover Position
+        widget: string
+        required: false
+        
+      - name: description
+        label: Description
+        widget: string
+        required: false
+
+      - name: palette
+        label: Palette
+        widget: object
+        fields:
+          - name: primary
+            label: Primary Color
+            widget: color
+            default: '#972E34'
+            allowInput: true
+          - name: secondary
+            label: Secondary Color
+            widget: color
+            default: '#E1CCB4'
+            allowInput: true
+
+      - name: locations
+        label: Exclusive Locations
+        widget: relation
+        collection: locations
+        search_fields: [title]
+        value_field: '{{slug}}'
+
+      - name: blurb
+        label: Blurb
+        widget: markdown
+        buttons: [bold, italic]
+        editor_components: []
+        minimal: true
+
+      - name: body
+        label: Body
+        required: false
+        widget: markdown
+
+      - name: gallery
+        label: Gallery
+        label_singular: Year
+        widget: list
+        collapsed: true
+        minimize_collapsed: true
+        summary: '{{fields.year}}'
+        add_to_top: true
+        fields:
+          - name: year
+            label: Year
+            widget: number
+          - name: instagram
+            label: Instagram Photos
+            label_singular: Photo
+            widget: list
+            minimize_collapsed: true
+            summary: '{{fields.link}}'
+            field:
+              name: link
+              label: link
+              widget: string
+          - name: our
+            label: Our Photos
+            label_singular: Photo
+            widget: list
+            minimize_collapsed: true
+            summary: '{{fields.image}}'
+            field:
+              name: image
+              label: Image
+              widget: object
+              fields:
+                - name: src 
+                  label: Source
+                  widget: image
+                  allow_multiple: false
+                - name: alt
+                  label: Alt Text
+                  widget: string
+
+      - name: quotes
+        label: Quotes
+        label_singular: Quote
+        widget: list
+        summary: '{{fields.author.title}}'
+        fields:
+          - name: quote
+            label: Quote
+            widget: markdown
+            buttons: [bold, italic]
+            editor_components: []
+            minimal: true
+          - name: workshop
+            label: Workshop
+            widget: relation
+            collection: workshops
+            search_fields: [title]
+            value_field: '{{slug}}'
+          - name: author
+            label: Author
+            widget: object
+            fields:
+              - name: title
+                label: Name
+                widget: string
+              - name: avatar
+                label: Avatar
+                widget: image
+                allow_multiple: false
+                media_folder: /media/people/
+                default: /media/people/placeholder.png
+
+      - name: brochure
+        label: Brochure
+        widget: file
+        allow_multiple: false
+        media_folder: /media/brochures/
+        default: /media/brochures/placeholder.pdf
+
+      - name: excursions
+        label: Recommended Excursions
+        required: false
+        widget: relation
+        collection: excursions
+        search_fields: [title]
+        value_field: '{{slug}}'
+        display_fields: [title, location]
+        multiple: true
+
+      - name: programs
+        label: Recommended Programs
+        required: false
+        widget: relation
+        collection: programs
+        search_fields: [title]
+        value_field: '{{slug}}'
+        display_fields: [title, location]
+        multiple: true
+
+  - name: workshops
+
+    label: Workshops
+    label_singular: Workshop
+
+    create: true
+    folder: content/workshops
+    media_folder: '/media/galleries/workshops/'
+
+    fields:
+      - name: title
+        label: Title
+        widget: string
+
+      - name: duration
+        label: Duration in Days
+        widget: number
+        value_type: float
+        step: 0.5
+
+      - name: costIndividual
+        label: Individual Cost
+        widget: number
+        required: false
+
+      - name: costGroup
+        label: Group Cost per Person
+        widget: number
+
+      - name: minGroup
+        label: Minimum Required Group Size
+        widget: number
+        default: 4
+
+      - name: locations
+        label: Locations
+        widget: relation
+        collection: locations
+        search_fields: [title]
+        value_field: '{{slug}}'
+        allow_multiple: true
+
+      - name: date
+        label: Date
+        widget: string
+        required: false
+
+      - name: time
+        label: Time
+        widget: string
+        required: false
+
+      - name: programs
+        label: Programs
+        widget: relation
+        collection: programs
+        search_fields: [title]
+        value_field: '{{slug}}'
+        multiple: true
+
+      - name: excursions
+        label: Excursions
+        widget: relation
+        collection: excursions
+        search_fields: [title]
+        value_field: '{{slug}}'
+        multiple: true
+        required: false
+
+      - name: body
+        label: Body
+        widget: markdown
+
+      - name: blurb
+        label: Blurb
+        widget: markdown
+        buttons: [bold, italic]
+        editor_components: []
+        minimal: true
+
+      - name: decor
+        label: Decor
+        widget: image
+        allow_multiple: false
+        required: false
+        media_folder: '/media/botanical-drawings/'
+
+  - name: notes
+
+    label: Notes
+    label_singular: Note
+
+    create: true
+    folder: content/notes
+    media_folder: '/media/galleries/notes/'
+
+    fields:
+      - name: title
+        label: Title
+        widget: string
+
+      - name: cover
+        label: Cover Image
+        widget: image
+        allow_multiple: false
+        required: false
+        media_folder: '/media/galleries/notes/'
+
+      - name: language
+        label: Language
+        widget: select
+        options:
+          - English
+          - Hindi
+        default: English
+
+      - name: topics
+        label: Topics
+        widget: list
+
+      - name: cost
+        label: Cost
+        widget: number
+
+      - name: pdf
+        label: PDF
+        widget: file
+        allow_multiple: false
+        media_folder: '/media/notes/'
+
+      - name: body
+        label: Preview
+        widget: markdown
+        buttons: [bold, italic]
+        editor_components: []
+
+  - name: projects
+
+    label: Projects
+    label_singular: Project
+
+    create: true
+    folder: content/projects
+    path: '{{slug}}/index'
+    media_folder: '/media/galleries/projects/{{slug}}/'
+
+    fields:
+      - name: title
+        label: Title
+        widget: string
+        
+      - name: description
+        label: Description
+        widget: string
+        required: false
+
+      - name: pages
+        label: Pages
+        label_singular: Page
+        widget: list
+        summary: '{{fields.title}}'
+        fields:
+          - name: title
+            label: Title
+            widget: string
+          - name: description
+            label: Description
+            widget: string
+            required: false
+          - name: slug
+            label: Slug
+            widget: string
+          - name: palette
+            label: Palette
+            widget: object
+            fields:
+              - name: primary
+                label: Primary Color
+                widget: color
+                default: '#972E34'
+                allowInput: true
+              - name: secondary
+                label: Secondary Color
+                widget: color
+                default: '#E1CCB4'
+                allowInput: true
+
+  - name: collections
+
+    label: Collections
+    label_singular: Collection
+
+    create: true
+    folder: content/collections
+    media_folder: '/media/galleries/collections/{{slug}}/'
+
+    fields:
+      - name: title
+        label: Title
+        widget: string
+        
+      - name: description
+        label: Description
+        widget: string
+        required: false
+
+      # - name: hidden
+      #   label: Hidden
+      #   widget: boolean
+      #   default: false
+      #   required: false
+
+      # - name: cover
+      #   label: Cover Image
+      #   widget: image
+      #   allow_multiple: false
+
+      # - name: coverposition
+      #   label: Cover Position
+      #   widget: string
+      #   required: false
+
+      - name: palette
+        label: Palette
+        widget: object
+        fields:
+          - name: primary
+            label: Primary Color
+            widget: color
+            default: '#972E34'
+            allowInput: true
+          - name: secondary
+            label: Secondary Color
+            widget: color
+            default: '#E1CCB4'
+            allowInput: true
+
+      # - name: blurb
+      #   label: Blurb
+      #   widget: markdown
+      #   buttons: [bold, italic]
+      #   editor_components: []
+      #   minimal: true
+
+      - name: body
+        label: Body
+        required: false
+        widget: markdown
+
+      # - name: gallery
+      #   label: Gallery
+      #   label_singular: Year
+      #   widget: list
+      #   collapsed: true
+      #   minimize_collapsed: true
+      #   # summary: '{{fields.year}}'
+      #   add_to_top: true
+      #   fields:
+      #     - name: src
+      #       label: Image
+      #       widget: image}
+      #     - name: alt
+      #       label: Alt text
+      #       widget: string

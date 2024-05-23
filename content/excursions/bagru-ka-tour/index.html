@@ -1,0 +1,201 @@
+<article id="custom">
+  <section
+    class="layout--container--grid layout--bleeding layout--leading--thick layout--lining--thick"
+    style="
+      background: var(--palette--neutral-1--paper);
+      color: var(--palette--neutral--ink);
+    "
+  >
+    <div class="layout--container--grid">
+      <div class="layout--span--half">
+        <h2 id="excursion--subtitle" style="margin-bottom: 1em">How is life like in Bagru?</h2>
+        <blockquote>
+          <p id="excursion--subblurb">
+            Let’s walk into the living worldof a craft practicing village - Bagru,
+            with conversations connecting people, environment and local crafts
+            through stories and cultures.
+          </p>
+        </blockquote>
+        <section class="workshops--detail">
+          <div>
+            <div id="excursion--cost" class="token--featured">
+              1800 INR
+            </div>
+            <div class="token--label--small">
+              Individual Cost
+            </div>
+          </div>
+          <div>
+            <div id="excursion--duration" class="token--featured">
+              2 days
+            </div>
+            <div class="token--label--small">
+              Duration
+            </div>
+          </div>
+          <div>
+            <div id="excursion--locations" class="token--featured">
+              Bagru        
+            </div>
+            <div class="token--label--small">
+              Locations
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <img
+        src="/media/galleries/workshops/bagru-ka-tour/excursion_bagru_P1050082.jpg"
+        alt="a placeholder poster for the Bagru ta Tour Excursion featuring a cow walking over indigo-dyed fabric laid out to dry"
+        class="layout--span--half"
+        style="background: currentColor;"
+      />
+    </div>
+  </section>
+
+  <section
+    class="layout--container--grid layout--bleeding layout--leading--thick layout--lining--thick"
+    style="color: var(--palette--neutral--ink)"
+  >    
+    <div id="excursion--verso"
+      class="layout--container--grid layout--leading layout--spacing custom--layout--container--split"
+    >
+      <div
+        class="layout--span--four layout--container--flexblock layout--leading"
+      >
+        <p>
+          As an outside viewer, we were engulfed with the sensation of awe and
+          humility when confronted by—the diversity in skills of artisans, the
+          vast vocabularies of patterns and motifs, and the sheer large scale of
+          production capacities. All of it at one place—Bagru.
+        </p>
+
+        <p>We loved that feeling.</p>
+
+        <p>
+          We took the conscious decision to contextually interpret this complex
+          network of craftspeople rooted in their surroundings and traditions
+          yet dynamically influenced by new global stimulus—climate, economic,
+          scientific, social, political.
+        </p>
+
+        <video muted autoplay loop controls disablepictureinpicture class="media--thin">
+          <source src="/media/galleries/workshops/block-carving/main_03.mov" />
+        </video>
+      </div>
+
+      <div
+        class="layout--span--four layout--container--flexblock layout--leading"
+      >
+        <img
+          src="/media/galleries/workshops/bagru-ka-tour/excursion_bagru_IMG_7480.jpg"
+          alt="a man walking across a field with many pieces of indigo-dyed fabric drying"
+          style="aspect-ratio: 3 / 2"
+        />
+        <img
+          src="/media/galleries/workshops/bagru-ka-tour/excursion_bagru_IMG_3430.jpg"
+          alt="a series of pools meant for washing dyed fabric"
+          style="aspect-ratio: 3 / 2"
+        />
+      </div>
+    </div>
+
+    <div id="excursion--recto"
+      class="layout--container--grid layout--leading layout--spacing custom--layout--container--split"
+    >
+      <div
+        class="layout--span--four layout--container--flexblock layout--leading"
+      >
+        <img
+          src="/media/galleries/workshops/bagru-ka-tour/excursion_bagru_IMG_20200225_083338.jpg"
+          alt="a large tub meant for washing dyed fabric and two people engaged in dyeing related activities"
+          style="aspect-ratio: 3 / 2"
+        />
+      </div>
+      <div
+        class="layout--span--four layout--container--flexblock layout--leading"
+      >
+        <p>
+          You perceive that you do not know anything about the neighbourhood
+          but, at the same time, you understand the emotion they are evoking.
+          Your senses are enliven and you fill the gaps of the story in your
+          head. You are a part of the story that you are experiencing.
+        </p>
+
+        <p>All is one.</p>
+
+        <p>
+          We want you to face this story the same way we did years ago, as if
+          he/she is immersing in a series of live performances in a living
+          museum.
+        </p>
+
+        <p><strong>Wabisabi Project</strong></p>
+        <img src="/media/brands/signature.avinash+kriti.png" style="width: 20ch; opacity: 50%; filter: contrast(0.5) sepia(1);">
+      </div>
+    </div>
+
+    <div id="excursion--bottom" class="layout--container--grid layout--leading--thick">
+      <img
+        src="/media/galleries/workshops/bagru-ka-tour/excursion_bagru_P1050124.jpg"
+        alt="a residential neighborhood in Bagru with brightly colored clothes drying on a balcony"
+        class="layout--span--four layout--container--flexblock layout--leading"
+        style="aspect-ratio: 3 / 2"
+      />
+      <img
+        src="/media/galleries/workshops/bagru-ka-tour/excursion_bagru_P1050105.jpg"
+        alt="a street with many people surrounging a drum player during a traditional wedding celebration"
+        class="layout--span--eight"
+        style="aspect-ratio: 4 / 3"
+      />
+    </div>
+  </section>
+
+  <style>
+    #custom img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    @media (width > 714px) {
+      #custom media--thin {
+        width: 66%
+      }
+    }
+
+    @media (width > 1160px) {
+      #custom .custom--layout--container--split {
+        grid-column: 4 / -4;
+      }
+    }
+
+    @media (width > 714px) {
+      #custom .custom--layout--container--split > *:nth-child(2n + 1) {
+        align-items: end;
+        text-align: end;
+      }
+    }
+
+    .workshops--detail {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--m0);
+    }
+    .workshops--detail > * {
+      display: grid;
+      gap: 0.33em;
+    }
+    .workshops--detail a {
+      text-decoration: none;
+    }
+    .workshops--detail a:not(:last-of-type)::after {
+      content: ', ';
+    }
+    .workshops--info {
+      display: grid;
+      align-items: start;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: var(--m1);
+    }
+  </style>
+</article>

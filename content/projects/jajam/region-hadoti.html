@@ -1,0 +1,147 @@
+<main class="layout--container--grid layout--leading--none layout--lining--none">
+    <link href="/projects/jajam/index.css" rel="stylesheet">
+
+    <nav id="header" class="layout--container--grid layout--bleeding layout--leading--none layout--lining--none"
+        style="background: var(--palette--lightest); color: var(--palette--primary);">
+        <div id="nav--subpages" class="ui--subnav layout--container--flex layout--leading--thin layout--spacing" style="padding-block: 1em;
+            --ui--base--font--weight: 700;
+">
+            <ui--button tabindex="0" tier="quinary" link="" target="_self" href="/projects/jajam">
+                People's Textile
+            </ui--button>
+            <hr>
+            <ui--button tabindex="0" tier="quinary" link="" target="_self" href="/projects/jajam/features">
+                The Journey
+            </ui--button>
+            <hr>
+            <ui--button tabindex="0" tier="quinary" link="" target="_self" href="/projects/jajam/regions"
+                class="currentPage">
+                Regional Jajam
+            </ui--button>
+        </div>
+    </nav>
+
+    <section id="showcase"
+        class="layout--container--grid layout--bleeding layout--leading--thick layout--lining--thick">
+        <style>
+            .workshops--info {
+                display: grid;
+                align-items: start;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: var(--m1);
+            }
+
+            .workshops--detail {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-columns: repeat(auto-fit, minmax(16ch, 1fr));
+                gap: var(--m0);
+            }
+
+            .workshops--detail>* {
+                display: grid;
+                gap: 0.33em;
+            }
+
+            .workshops--detail a {
+                text-decoration: none;
+            }
+
+            .workshops--detail a:not(:last-of-type)::after {
+                content: ', ';
+            }
+
+            .workshops--detail .token--featured {
+                color: var(--palette--primary);
+            }
+
+            .workshops--detail .token--label--small {
+                color: var(--palette--secondary-accent);
+            }
+
+            @media (width < 714px) {
+                .workshops--info {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+
+        <div class="layout--container--grid --center layout--leading--thick">
+            <h2>Regional Jajam from Hadoti</h2>
+        </div>
+
+        <section class="layout--container--grid layout--leading--thick">
+            <img class="layout--span--bleed" src="/media/projects/jajam/regions/hadoti/hadoti-jajam-1200x563.jpg" alt="">
+
+            <div class="workshops--info">
+                <section class="workshops--detail">
+                    <div style="grid-column: 1 / -1;">
+                        <div class="token--featured">
+                            Anandi Lal
+                        </div>
+                        <div class="token--label--small">
+                            Printer
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="token--featured">
+                            c.1982
+                        </div>
+                        <div class="token--label--small">
+                            Year
+                        </div>
+                    </div>
+                    <div>
+                        <div class="token--featured">
+                            244×450cm
+                        </div>
+                        <div class="token--label--small">
+                            Size
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="token--featured">
+                            Dablana
+                        </div>
+                        <div class="token--label--small">
+                            Location
+                        </div>
+                    </div>
+                    <div>
+                        <div class="token--featured">
+                            Block Print
+                        </div>
+                        <div class="token--label--small">
+                            Craft
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="token--featured">
+                            Natural Dye
+                        </div>
+                        <div class="token--label--small">
+                            Color
+                        </div>
+                    </div>
+                    <div>
+                        <div class="token--featured">
+                            Handloom Cotton
+                        </div>
+                        <div class="token--label--small">
+                            Fabric
+                        </div>
+                    </div>
+                </section>
+                <p>Jajam from the Bundi district the one here is highly decorative with ornamental aesthetics. Breathing
+                    life into floral designs and hunting scenes, its motifs are inspired by the action-packed miniature
+                    paintings gracing the walls of the Hadoti region. We can notice a scattered distribution of the red
+                    color. Earlier it was saturated under the free-flowing stream of the Mej river. Dam construction
+                    across Mej river, dried up water sources rendering lower quality to the vibrant hues of not only
+                    Jajam but also other craft practices of Rajasthan.</p>
+            </div>
+        </section>
+    </section>
+</main>

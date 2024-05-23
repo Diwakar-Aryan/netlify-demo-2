@@ -1,0 +1,32 @@
+{
+  "name": "site",
+  "type": "module",
+  "scripts": {
+    "start": "node --no-warnings --loader @esbuild-kit/esm-loader index.ts",
+    "build": "npm start",
+    "serve": "npx serve ./dist",
+    "dev": "npx concurrently -k -s command-1 \"npm run watch\" \"npx run serve\"",
+    "watch": "npx nodemon --ext \"ts,yml,md,html\" --exec \"npm run start\""
+  },
+  "watch": {
+    "build": "src/**/*.ts"
+  },
+  "devDependencies": {
+    "@esbuild-kit/esm-loader": "^2.5.5",
+    "@types/marked": "^4.0.7",
+    "@types/micromatch": "^4.0.2",
+    "@types/node": "^18.8.5",
+    "code-tag": "^1.1.0",
+    "concurrently": "^7.5.0",
+    "dotenv": "^16.0.3",
+    "fast-glob": "^3.2.12",
+    "gray-matter": "^4.0.3",
+    "image-size": "^1.0.2",
+    "marked": "^4.1.1",
+    "micromatch": "^4.0.5",
+    "nodemon": "^2.0.20",
+    "serve": "^14.2.1",
+    "stripe": "^11.16.0",
+    "ts-node": "^10.9.1"
+  }
+}

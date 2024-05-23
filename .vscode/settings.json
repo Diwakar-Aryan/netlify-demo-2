@@ -1,0 +1,6 @@
+{
+  "deno.enablePaths": [
+    "./netlify/edge-functions"
+  ],
+  "git.fetchOnPull": false
+}

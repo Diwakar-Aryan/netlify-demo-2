@@ -1,0 +1,44 @@
+
+img {
+    width: 100%;
+}
+
+h1.--heavy {
+    font-weight: 800;
+    letter-spacing: 0.1ch;
+}
+
+p {
+    max-width: 60ch;
+}
+
+blockquote {
+    margin-bottom: unset;
+}
+
+.ui--subnav {
+    width: 100%;
+    justify-content: space-evenly; 
+    --ui--base--font--weight: 600;
+}
+
+.ui--subnav > hr {
+    flex-grow: 1;
+}
+
+.ui--subnav > ui--button {
+    opacity: 66%;
+}
+
+.ui--subnav > ui--button.currentPage {
+    opacity: 100%;
+    --ui--base--font--weight: 800;
+}
+
+@media (width < 714px) {
+    .ui--subnav {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+}
